@@ -38,8 +38,14 @@
 // USB Flash Drive support
 #define HAS_OTG_USB_HOST_SUPPORT
 
+
+
 #define TP                                        // Enable to define servo and probe pins
-#define M5_EXTENDER                               // The M5 extender is attached
+//#define M5_EXTENDER                               // The M5 extender is attached
+
+
+
+
 
 //
 // Servos
@@ -325,9 +331,16 @@
 
 #define HEATER_BED_PIN                      PA2   // Hotbed
 
-#define FAN_PIN                             PE5   // Fan0
-#define FAN1_PIN                            PE6   // Fan1
-#define FAN2_PIN                            PC8   // Fan2
+
+
+
+
+#define FAN_PIN                             PE5   // Fan0 - Part Cooling
+#define FAN1_PIN                            PE6   // Fan1 - Extruder Cooling
+#define FAN2_PIN                            PC8   // Fan2 - Chassis Fan
+
+
+
 
 #if ENABLED(M5_EXTENDER)
   #define FAN3_PIN                          PI5   // M5 FAN1
@@ -336,6 +349,10 @@
   //#define FAN6_PIN                        PC9   // M5 FAN4
   //#define FAN7_PIN                        PE14  // M5 FAN5
 #endif
+
+
+
+
 
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION ONBOARD
@@ -376,6 +393,13 @@
  *               -----                                             -----
  *               EXP2                                              EXP1
  */
+
+
+
+
+
+
+
 
 //
 // LCDs and Controllers
