@@ -41,7 +41,7 @@
 
 
 #define TP                                        // Enable to define servo and probe pins
-//#define M5_EXTENDER                               // The M5 extender is attached
+#define M5_EXTENDER                               // The M5 extender is attached
 
 
 
@@ -105,16 +105,24 @@
   #define Z_MAX_PIN                  E2_DIAG_PIN  // Z+
 #endif
 
+
+
+
+
 //
 // Pins on the extender
 //
 #if ENABLED(M5_EXTENDER)
   #define X2_STOP_PIN                       PI4   // M5 M1_STOP
-  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP
+  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP     // HEATER_CHAMBER_PIN (on/off)
   #define Z2_STOP_PIN                       PF4   // M5 M2_STOP
   #define Z3_STOP_PIN                       PI7   // M5 M4_STOP
   #define Z4_STOP_PIN                       PF6   // M5 M3_STOP
 #endif
+
+
+
+
 
 #if ENABLED(TP) && !defined(Z_MIN_PROBE_PIN)
   #define Z_MIN_PROBE_PIN                   PH11  // Z Probe must be PH11
@@ -343,11 +351,19 @@
 
 
 #if ENABLED(M5_EXTENDER)
-  #define FAN3_PIN                          PI5   // M5 FAN1
+
+  // CONTROLLER FAN PIN PWM
+  #define FAN3_PIN                          PI5   // M5 FAN1   
+
+  // CASE_LIGHT PIN PWM
   #define FAN4_PIN                          PE9   // M5 FAN2
+
   #define FAN5_PIN                          PE11  // M5 FAN3
+
+  
   //#define FAN6_PIN                        PC9   // M5 FAN4
   //#define FAN7_PIN                        PE14  // M5 FAN5
+
 #endif
 
 

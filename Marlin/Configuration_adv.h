@@ -143,7 +143,7 @@
   #define TEMP_CHAMBER_HYSTERESIS     1   // (°C) Temperature proximity considered "close enough" to the target
   #define CHAMBER_LIMIT_SWITCHING
 
-  #define HEATER_CHAMBER_PIN       PH8   // Chamber heater on/off pin
+  #define HEATER_CHAMBER_PIN          Y2_STOP_PIN  //  (PF12) <- on M5 connector...  
   #define HEATER_CHAMBER_INVERTING true
 
 
@@ -407,12 +407,12 @@
  */
 #define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
-  #define CONTROLLER_FAN_PIN 		PH10     // Set a custom pin for the controller fan
+  #define CONTROLLER_FAN_PIN          FAN3_PIN // ( PI5 on M5 Connector ) Set a custom pin for the controller fan
   //#define CONTROLLER_FAN_USE_Z_ONLY       // With this option only the Z axis is considered
   //#define CONTROLLER_FAN_IGNORE_Z         // Ignore Z stepper. Useful when stepper timeout is disabled.
   #define CONTROLLERFAN_SPEED_MIN         0 // (0-255) Minimum speed. (If set below this value the fan is turned off.)
-  #define CONTROLLERFAN_SPEED_ACTIVE    102 // (0-255) Active speed, used when any motor is enabled
-  #define CONTROLLERFAN_SPEED_IDLE       51 // (0-255) Idle speed, used when motors are disabled
+  #define CONTROLLERFAN_SPEED_ACTIVE    255 // (0-255) Active speed, used when any motor is enabled
+  #define CONTROLLERFAN_SPEED_IDLE       255 // (0-255) Idle speed, used when motors are disabled
   #define CONTROLLERFAN_IDLE_TIME        30 // (seconds) Extra time to keep the fan running after disabling motors
   #define CONTROLLER_FAN_EDITABLE           // Enable M710 configurable settings
   #if ENABLED(CONTROLLER_FAN_EDITABLE)
@@ -423,7 +423,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-#define FAN_KICKSTART_TIME 100
+#define FAN_KICKSTART_TIME 300
 
 // Some coolers may require a non-zero "off" state.
 //#define FAN_OFF_PWM  1
@@ -486,7 +486,7 @@
 
 #if ENABLED(FAST_PWM_FAN)
   //#define FAST_PWM_FAN_FREQUENCY 31400
-  #define FAST_PWM_FAN_FREQUENCY 643
+  #define FAST_PWM_FAN_FREQUENCY 1287
   //#define USE_OCR2A_AS_TOP
 #endif
 
@@ -513,7 +513,7 @@
 #define E6_AUTO_FAN_PIN -1
 #define E7_AUTO_FAN_PIN -1
 
-#define CHAMBER_AUTO_FAN_PIN FAN2_PIN
+#define CHAMBER_AUTO_FAN_PIN      PC8   // AN2 connector on board
 
 
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 40
@@ -539,7 +539,7 @@
 #define CASE_LIGHT_ENABLE
 #if ENABLED(CASE_LIGHT_ENABLE)
 
-  #define CASE_LIGHT_PIN                  PI8   // FIXME Switch to PC9 on v1.2 board // Override the default pin if needed
+  #define CASE_LIGHT_PIN                  FAN4_PIN   // ( PE9 M5 Connector ) 
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
 
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on

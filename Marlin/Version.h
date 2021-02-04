@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "01" 
+#define COMPILE_VERSION "02" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,6 +37,34 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  *
+ * V02  02/04/2021 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  02/03/2021
+ * 
+ *      #define FAST_PWM_FAN_FREQUENCY 1287
+ *      -- #define FAST_PWM_FAN
+ *      ++ #define FAN_SOFT_PWM
+ *           #define SOFT_PWM_SCALE 1
+ * 
+ *       /************************
+ *       *  M5 Expansion Header  * 
+ *       *************************
+ *
+ *      #define M5_EXTENDER 
+ *        #define NEO_PIN                     PF13                                          // M5 Connector         RGB_LED     PWM for neo-pixel lights in chamber
+ *        #define HEATER_CHAMBER_PIN          Y2_STOP_PIN   // #define Y2_STOP_PIN   PF12   // M5 Connector         M5_STOP      
+ *        #define CONTROLLER_FAN_PIN          FAN3_PIN      // #define FAN3_PIN      PI5    // M5 Connector         FAN_M1      PWM for fans in control box
+ *        #define CASE_LIGHT_PIN              FAN4_PIN      // #define FAN4_PIN      PE9    // M5 Connector         FAN_M2      PWM for 12v Case Light LEDs
+ * 
+ *       /************************
+ *       *  FAN HEADERS          * 
+ *       *************************
+ *
+ *        #define FAN_PIN                     PE5                                           // Fan0 - Part Cooling
+ *        #define FAN1_PIN                    PE6                                           // Fan1 - Extruder Cooling
+ *        #define FAN2_PIN                    PC8                                           // Fan2 - Chamber / Chassis Fan
+ *          #define CHAMBER_AUTO_FAN_PIN      FAN2_PIN                                      
+ * 
+ * 
  * V01  02/02/2021 18:24
  *     INITIAL:    New Board replacing SKR PRO 1.1 ( BTT GTR is the upgrade to the PRO )
  *          #define BOARD_BTT_GTR_V1_0            4210  // BigTreeTech GTR v1.0 (STM32F407IGT)
