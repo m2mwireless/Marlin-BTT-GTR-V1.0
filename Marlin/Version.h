@@ -40,7 +40,7 @@
  * V03  02/xx/2021 xx:xx
  * 
  * 
- * V02-b  02/04/2021 19:30
+ * V02-b  02/04/2021 19:38
  *      UPDATES: MARLIN upstream bugfix-2.0.x  02/04/2021
  * 
  *      #define FAST_PWM_FAN_FREQUENCY 1287
@@ -48,9 +48,9 @@
  *      ++ #define FAN_SOFT_PWM
  *           #define SOFT_PWM_SCALE 1
  * 
- *       /************************
- *       *  M5 Expansion Header  * 
- *       *************************
+ *       //---------------------------
+ *       //  M5 Expansion Header  
+ *       //---------------------------
  *
  *      #define M5_EXTENDER 
  *        #define NEO_PIN                     PF13                                          // M5 Connector         RGB_LED     PWM for neo-pixel lights in chamber
@@ -58,9 +58,9 @@
  *        #define CONTROLLER_FAN_PIN          FAN3_PIN      // #define FAN3_PIN      PI5    // M5 Connector         FAN_M1      PWM for fans in control box
  *        #define CASE_LIGHT_PIN              FAN4_PIN      // #define FAN4_PIN      PE9    // M5 Connector         FAN_M2      PWM for 12v Case Light LEDs
  * 
- *       /************************
- *       *  FAN HEADERS          * 
- *       *************************
+ *       //---------------------------
+ *       //      FAN HEADERS           
+ *       //---------------------------
  *
  *        #define FAN_PIN                     PE5                                           // Fan0 - Part Cooling
  *        #define FAN1_PIN                    PE6                                           // Fan1 - Extruder Cooling
