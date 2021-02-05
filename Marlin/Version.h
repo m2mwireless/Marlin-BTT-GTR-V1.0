@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "02" 
+#define COMPILE_VERSION "02-b" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,8 +37,11 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  *
- * V02  02/04/2021 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0.x  02/03/2021
+ * V03  02/xx/2021 xx:xx
+ * 
+ * 
+ * V02-b  02/04/2021 19:30
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  02/04/2021
  * 
  *      #define FAST_PWM_FAN_FREQUENCY 1287
  *      -- #define FAST_PWM_FAN
