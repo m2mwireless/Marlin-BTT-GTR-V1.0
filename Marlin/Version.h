@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "02-b" 
+#define COMPILE_VERSION "03(g)" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,10 +37,26 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  *
- * V03  02/xx/2021 xx:xx
+ * V03  02/05/2021 12:18
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/05/2021
+ *      #define HEATER_CHAMBER_PIN          #define HEATER_6_PIN                      PE13  // M5 HEAT4
+ *      #define SENSORLESS_HOMING // StallGuard capable drivers only
+ *          #define X_STALL_SENSITIVITY   96
+ *           #define Y_STALL_SENSITIVITY  89
+ *       #define TMC_HOME_PHASE { 128, 128, 128 }
  * 
  * 
- * V02-b  02/04/2021 19:38
+ * 
+ * 
+ *       #define NEO_PIN                        PF13            // 04   PF13    RGB_LED     PWM - Neo-pixel lights in chamber
+ *       #define CASE_LIGHT_PIN                 FAN7_PIN        // 14   PE14    M5 FAN5     PWM - White LEDs in chamber
+ *       #define HEATER_CHAMBER_PIN             HEATER_6_PIN    // 13   PE13    M5 HEAT4    On/Off Heater in Chamber ( IN2 on relay module )
+ *       #define CONTROLLER_FAN_PIN             FAN3_PIN        // 04   PI5     M5 FAN1     PWM - Fans inside Control Box
+ * 
+ * 
+ * 
+ * 
+ * V02  02/04/2021 19:38
  *      UPDATES: MARLIN upstream bugfix-2.0.x  02/04/2021
  * 
  *      #define FAST_PWM_FAN_FREQUENCY 1287

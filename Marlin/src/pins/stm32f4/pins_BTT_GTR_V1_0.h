@@ -114,11 +114,15 @@
 //
 #if ENABLED(M5_EXTENDER)
   #define X2_STOP_PIN                       PI4   // M5 M1_STOP
-  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP     // HEATER_CHAMBER_PIN (on/off)
+  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP   
   #define Z2_STOP_PIN                       PF4   // M5 M2_STOP
   #define Z3_STOP_PIN                       PI7   // M5 M4_STOP
   #define Z4_STOP_PIN                       PF6   // M5 M3_STOP
 #endif
+
+
+
+ 
 
 
 
@@ -173,11 +177,14 @@
   #define E2_CS_PIN                         PC12
 #endif
 
+
 #if ENABLED(M5_EXTENDER)
 
-  #define E3_STEP_PIN                       PF3
+  
+ #define E3_STEP_PIN                       PF3
   #define E3_DIR_PIN                        PG3
   #define E3_ENABLE_PIN                     PF8
+
   #ifndef E3_CS_PIN
     #define E3_CS_PIN                       PG4
   #endif
@@ -333,7 +340,10 @@
   #define HEATER_3_PIN                      PD15  // M5 HEAT1
   #define HEATER_4_PIN                      PD13  // M5 HEAT2
   #define HEATER_5_PIN                      PD12  // M5 HEAT3
+
+  //HEATER_CHAMBER_PIN
   #define HEATER_6_PIN                      PE13  // M5 HEAT4
+
   #define HEATER_7_PIN                      PI6   // M5 HEAT5
 #endif
 
@@ -352,17 +362,14 @@
 
 #if ENABLED(M5_EXTENDER)
 
-  // CONTROLLER FAN PIN PWM
+// CONTROLLER_FAN_PIN  PWM
   #define FAN3_PIN                          PI5   // M5 FAN1   
-
-  // CASE_LIGHT PIN PWM
   #define FAN4_PIN                          PE9   // M5 FAN2
-
   #define FAN5_PIN                          PE11  // M5 FAN3
-
-  
   //#define FAN6_PIN                        PC9   // M5 FAN4
-  //#define FAN7_PIN                        PE14  // M5 FAN5
+
+// CASE_LIGHT_PIN  PWM
+  #define FAN7_PIN                        PE14  // M5 FAN5
 
 #endif
 

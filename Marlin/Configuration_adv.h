@@ -143,7 +143,7 @@
   #define TEMP_CHAMBER_HYSTERESIS     1   // (°C) Temperature proximity considered "close enough" to the target
   #define CHAMBER_LIMIT_SWITCHING
 
-  #define HEATER_CHAMBER_PIN          Y2_STOP_PIN  //  (PF12) <- on M5 connector...  
+  #define HEATER_CHAMBER_PIN          HEATER_6_PIN // #define HEATER_6_PIN                      PE13  // M5 HEAT4<- on M5 connector...  
   #define HEATER_CHAMBER_INVERTING true
 
 
@@ -407,7 +407,7 @@
  */
 #define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
-  #define CONTROLLER_FAN_PIN          FAN3_PIN // ( PI5 on M5 Connector ) Set a custom pin for the controller fan
+  #define CONTROLLER_FAN_PIN          FAN3_PIN  // M5 FAN1   // ( PI5 on M5 Connector ) Set a custom pin for the controller fan
   //#define CONTROLLER_FAN_USE_Z_ONLY       // With this option only the Z axis is considered
   //#define CONTROLLER_FAN_IGNORE_Z         // Ignore Z stepper. Useful when stepper timeout is disabled.
   #define CONTROLLERFAN_SPEED_MIN         0 // (0-255) Minimum speed. (If set below this value the fan is turned off.)
@@ -539,7 +539,7 @@
 #define CASE_LIGHT_ENABLE
 #if ENABLED(CASE_LIGHT_ENABLE)
 
-  #define CASE_LIGHT_PIN                  FAN4_PIN   // ( PE9 M5 Connector ) 
+  #define CASE_LIGHT_PIN                  FAN7_PIN   //  #define FAN7_PIN                        PE14  // M5 FAN5
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
 
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
@@ -696,10 +696,12 @@
 
 //#define SENSORLESS_BACKOFF_MM  { 2, 2 }     // (mm) Backoff from endstops before sensorless homing
 
-#define HOMING_BUMP_MM      { 5, 5, 2 }       // (mm) Backoff from endstops after first bump
-#define HOMING_BUMP_DIVISOR { 2, 2, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
-
-#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
+//#define HOMING_BUMP_MM      { 5, 5, 2 }       // (mm) Backoff from endstops after first bump
+//#define HOMING_BUMP_DIVISOR { 2, 2, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+//#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
+#define HOMING_BUMP_MM      { 10, 10, 4 }       // (mm) Backoff from endstops after first bump
+#define HOMING_BUMP_DIVISOR { 4, 3, 5 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+#define HOMING_BACKOFF_POST_MM { 0, 0, 6 }  // (mm) Backoff from endstops after homing
 
 #define QUICK_HOME                          // If G28 contains XY do a diagonal move first
 //#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
@@ -1180,7 +1182,7 @@
   //#define LCD_TIMEOUT_TO_STATUS 15000
 #define LCD_TIMEOUT_TO_STATUS 1200000    // 20 mins
   #if ENABLED(SHOW_BOOTSCREEN)
-    #define BOOTSCREEN_TIMEOUT 2000      // (ms) Total Duration to display the boot screen(s)
+    #define BOOTSCREEN_TIMEOUT 1000      // (ms) Total Duration to display the boot screen(s)
     #if EITHER(HAS_MARLINUI_U8GLIB, TFT_COLOR_UI)
       #define BOOT_MARLIN_LOGO_SMALL     // Show a smaller Marlin logo on the Boot Screen (saving lots of flash)
     #endif
@@ -2368,7 +2370,7 @@
  */
 #if HAS_TRINAMIC_CONFIG
 
-  #define HOLD_MULTIPLIER    0.75  // Scales down the holding current from run current
+  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
 
   /**
    * Interpolate microsteps to 256
@@ -2692,14 +2694,17 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
-  //#define SENSORLESS_HOMING // StallGuard capable drivers only
+  #define SENSORLESS_HOMING // StallGuard capable drivers only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  60
+    #define X_STALL_SENSITIVITY  96
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  60
+    
+    #define Y_STALL_SENSITIVITY  89
     #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
+    
+    
     //#define Z_STALL_SENSITIVITY  135
     //#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
     //#define Z3_STALL_SENSITIVITY Z_STALL_SENSITIVITY
@@ -2719,7 +2724,7 @@
    *
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
-  // #define TMC_HOME_PHASE { 896, 896, 896 }
+   #define TMC_HOME_PHASE { 128, 128, 128 }
 
   /**
    * Beta feature!
