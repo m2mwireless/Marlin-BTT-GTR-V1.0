@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "03(g)" 
+#define COMPILE_VERSION "04" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,13 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
- *
+ * 
+ * V04  02/07/2021 17:20
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/07/2021
+ *      define SERIAL_PORT_2 3   TFT connector - 5v, Gnd <=> Pi-14, Tx <=> Pi-10, Rx <=> Pi-8, Rst
+ *      
+ * 
+ *       
  * V03  02/05/2021 12:18
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/05/2021
  *      #define HEATER_CHAMBER_PIN          #define HEATER_6_PIN                      PE13  // M5 HEAT4

@@ -103,12 +103,22 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  * 
- * ** -1 Bootloader / Built in USB on SKR PRO 1.1
- * 0 = NOT DEFINED on CHIPSET
- * 1 = TFT ?? doesnt work
- * !!! 3 = UART3 - lower right corner of board Rx,Tx, Gnd, 5V ( left ot right )
- * 6 = wifi module
+ * -1 = Bootloader  - Built in USB on SKR PRO 1.1 / BTT GTR 1.0 / SKR 1.4 Turbo / SKR Mini E3 V2.0
+ * 
+ *  0 = N/A         - NOT DEFINED on CHIPSET
+ * 
+ *  1 = TFT         - SKR PRO V1.1
+ *  3 = UART3       - SKR PRO V1.1 lower right corner UART Rx,Tx, Gnd, 5V ( left to right )
+ * 
+ *  1 = ??
+ *  3 = TFT         - BTT GTR V1.0 TFT Connector  5V, Gnd, Tx, Rx, Rst 
+ * 
+ *  4 = NO BOOT
+ *  5 = NO BOOT
+ *  6 = WIFI        - WiFi module
+ * 
  */
+
 #define SERIAL_PORT -1
 
 /**
@@ -116,7 +126,7 @@
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 1		//3 SKR PRO
+#define SERIAL_PORT_2 3 
 
 /**
  * This setting determines the communication speed of the printer.
@@ -127,7 +137,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -787,8 +797,8 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-//#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25, 25 }
+//#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -802,12 +812,12 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-//#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
-#define DEFAULT_MAX_ACCELERATION      { 600, 600, 40, 5000, 9999 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
+//#define DEFAULT_MAX_ACCELERATION      { 600, 600, 40, 5000, 5000 }
 
-//#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
+#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000, 20000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -818,13 +828,13 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-//#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-//#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-//#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   675    // X, Y, Z acceleration for travel (non printing) moves
+//#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
+//#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
+//#define DEFAULT_TRAVEL_ACCELERATION   675    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -2564,7 +2574,7 @@
 //#define NUM_M106_FANS 1
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-//#define FAST_PWM_FAN
+#define FAST_PWM_FAN
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
@@ -2576,7 +2586,7 @@
 // However, control resolution will be halved for each increment;
 // at zero value, there are 128 effective control positions.
 // :[0,1,2,3,4,5,6,7]
-#define SOFT_PWM_SCALE 1
+#define SOFT_PWM_SCALE 0
 
 // If SOFT_PWM_SCALE is set to a value higher than 0, dithering can
 // be used to mitigate the associated resolution loss. If enabled,
