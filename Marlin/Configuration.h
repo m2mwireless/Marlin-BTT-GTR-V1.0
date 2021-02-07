@@ -510,16 +510,21 @@
     // E0 - 40w  11/15/2020 PS 25.25VDC
     //  M301 E0 P16.33 I1.28 D52.26
     //  
-    // E0 - 40w  01/17/2021 PS 25.25VDC  FAST_PWM_FAN_FREQUENCY  643
+    // BTT SKR PRO V1.1     E0 - 40w  01/17/2021 PS 25.25VDC  FAST_PWM_FAN_FREQUENCY  643
     //  M301 E0 P21.14 I1.75 D63.94
+    //
+    //  BTT GTR V1.0  02/07/2021 @285 E0 40W ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+    //    #define DEFAULT_Kp 18.81, DEFAULT_Ki 1.69, DEFAULT_Kd 52.30
+    //    M301 E0 P18.81 I1.69 D52.30
+    //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  21.14,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.75,   2.83 }
-    #define DEFAULT_Kd_LIST {  63.94,  95.09 }
+    #define DEFAULT_Kp_LIST {  18.81,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.69,   2.83 }
+    #define DEFAULT_Kd_LIST {  52.30,  95.09 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -572,14 +577,18 @@
   //
   // Stock Creality Ender 3 pro Heated Bed
   // 11/13/2020 @ 135 C (PS voltage 25.25)
+  //
+  // 01/09/2021 @ 90 C - BTT SKR PRO V1.1
   // M304 P101.30 I19.22 D355.92
-  // 01/09/2021 @ 90 C
+  //
+  // 02/07/2021 @ 90C ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+  // M304 P99.75 I19.48 D340.43
   // 
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 113.96
-#define DEFAULT_bedKi 21.12
-#define DEFAULT_bedKd 409.89
+#define DEFAULT_bedKp 99.75
+#define DEFAULT_bedKi 19.48
+#define DEFAULT_bedKd 340.43
 
 #endif // PIDTEMPBED
 
@@ -817,7 +826,7 @@
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -2574,7 +2583,7 @@
 //#define NUM_M106_FANS 1
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-#define FAST_PWM_FAN
+//#define FAST_PWM_FAN
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
@@ -2597,7 +2606,7 @@
 // Temperature status LEDs that display the hotend and bed temperature.
 // If all hotends, bed temperature, and target temperature are under 54C
 // then the BLUE led is on. Otherwise the RED led is on. (1C hysteresis)
-//#define TEMP_STAT_LEDS
+#define TEMP_STAT_LEDS
 
 // Support for the BariCUDA Paste Extruder
 //#define BARICUDA

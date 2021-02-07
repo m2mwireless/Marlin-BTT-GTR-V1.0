@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "04" 
+#define COMPILE_VERSION "05" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,10 +37,37 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V04  02/07/2021 17:20
+ * V05  02/07/2021 12:24
+ * 
+ *      PID:TUNING:
+ *       EXT: E0 - @285 E0 40W ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+ *          M301 E0 P18.81 I1.69 D52.30
+ *           #define DEFAULT_Kp 18.81 
+ *           #define DEFAULT_Ki 1.69 
+ *           #define DEFAULT_Kd 52.30
+ *       BED: @ 90C ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+ *          M304 P99.75 I19.48 D340.43     
+ *           #define DEFAULT_bedKp 99.75
+ *           #define DEFAULT_bedKi 19.48
+ *           #define DEFAULT_bedKd 340.43
+ * 
+ *      STEPPER CURRENT:
+ *          #define X_CURRENT (Y, E0, E1)       800 
+ *          #define Z_CURRENT (Z and Z1)       1250
+ *          
+ *      #define SENSORLESS_BACKOFF_MM  { 2, 2 }         // (mm) Backoff from endstops before sensorless homing
+ *      #define HOMING_BUMP_MM      { 5, 5, 2 }         // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 2, 2, 4 }         // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      #define HOMING_BACKOFF_POST_MM { 2, 2, 2 }      // (mm) Backoff from endstops after homing
+ * 
+ * 
+ * V04  02/07/2021 10:38
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/07/2021
- *      define SERIAL_PORT_2 3   TFT connector - 5v, Gnd <=> Pi-14, Tx <=> Pi-10, Rx <=> Pi-8, Rst
- *      
+ * 
+ *      define SERIAL_PORT_2    3   TFT connector - 5v, Gnd <=> Pi-14, Tx <=> Pi-10, Rx <=> Pi-8, Rst
+ * 
+ *      #define FAN_SOFT_PWM
+ *      #define SOFT_PWM_SCALE 0
  * 
  *       
  * V03  02/05/2021 12:18
