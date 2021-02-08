@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "06" 
+#define COMPILE_VERSION "07" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,9 +37,8 @@
  * 
  * Vxx MM/DD/2021 HH:MM
 
- * V07  02/08/2021 18:08
+ * V07  02/08/2021 10:32
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1283.00, 6442.00, 6220.00, 6220.00 }
- * 
  * 
  *      [ Z AXIS Calibration ]
  *      lead screw = 1 rev = 8mm.
