@@ -36,6 +36,52 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+
+ * V07  02/08/2021 18:08
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1283.00, 6442.00, 6220.00, 6220.00 }
+ * 
+ * 
+ *      [ Z AXIS Calibration ]
+ *      lead screw = 1 rev = 8mm.
+ *      1 rev = 400 * 16 steps. 
+ *      8 / 6400 = .00125 mm per step.
+ *      .00125 mm = 1 step @ .9 stepper (400 per rev)
+ *          measured 5.05 @ 5.00mm and 30.30 @ 30mm.
+ *          5.05 - 5.00 = 0.05. 
+ *          .05 / 5 = .01mm over per mm in height.
+ *          .01mm  / .00125 = 8 steps
+ *          
+ *         **************************************************
+ *         ***        8 steps = .01 mm Z travel            **
+ *         ***        1 step  = .00125 mm Z travel         **
+ *         **************************************************
+ * 
+ *      [ X/Y AXIS CALIBRATION ]
+ *      80 * 16 = 1280 steps 
+ *  
+ *      1 rev = 400 steps = 40mm travel
+ *      10 steps = 1mm of travel
+ *      =>> 1 step = .1 mm of travel
+ *             .1 step = .01 mm of travel  
+ *          @ 16 microstepping 
+ *              16 steps = .1 mm
+ *              1 step = .1 / 16 = 0.016667 mm
+ * 
+ *         ***      1 step =  0.016667 mm XY travel      ***
+ * 
+ *          1 mm = 80 * 16 = 1280
+ *          .1 mm = 128.0 steps        
+ *          .01 mm = 12.8 steps
+ * 
+ *         *************************************************
+ *          0.0007812  mm = 1 step
+ *          0.0015625  mm = 2 steps
+ *          0.00234375 mm = 3 steps
+ * 
+ *          0.0078120  mm = 10 steps
+ *          0.01000000 mm = 12.8 steps
+ *         *************************************************
+ * 
  * 
  * V06  02/07/2021 18:08
  *      #define INVERT_E0_DIR true      // E0 is RIGHT side extruder
