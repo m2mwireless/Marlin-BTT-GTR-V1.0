@@ -37,8 +37,10 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V06  02/07/2021 xx:xx
- * 
+ * V06  02/07/2021 18:08
+ *      #define INVERT_E0_DIR true      // E0 is RIGHT side extruder
+ *      #define INVERT_E1_DIR false     // E1 is LEFT  side extruder
+ *      
  *      #define X_STALL_SENSITIVITY  80
  *      #define Y_STALL_SENSITIVITY  80
  * 
