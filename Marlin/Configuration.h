@@ -2608,6 +2608,10 @@
 // then the BLUE led is on. Otherwise the RED led is on. (1C hysteresis)
 #define TEMP_STAT_LEDS
 
+#define STAT_LED_RED_PIN      PF7   // EXT-1
+#define STAT_LED_BLUE_PIN     PF8   // EXT-1
+
+
 // Support for the BariCUDA Paste Extruder
 //#define BARICUDA
 

@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "05" 
+#define COMPILE_VERSION "06" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,6 +37,16 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V06  02/07/2021 xx:xx
+ * 
+ *      #define X_STALL_SENSITIVITY  80
+ *      #define Y_STALL_SENSITIVITY  80
+ * 
+ *      #define TEMP_STAT_LEDS
+ *        #define STAT_LED_RED_PIN      PF7   // EXT-1
+ *        #define STAT_LED_BLUE_PIN     PF8   // EXT-1
+ *      
+ *      
  * V05  02/07/2021 12:24
  * 
  *      PID:TUNING:

@@ -45,9 +45,6 @@
 
 
 
-#define STAT_LED_RED_PIN PF7
-#define STAT_LED_BLUE_PIN PF8
-
 
 //
 // Servos
