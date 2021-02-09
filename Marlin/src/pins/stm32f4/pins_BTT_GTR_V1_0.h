@@ -328,12 +328,17 @@
 #define MAX6675_SCK_PIN           THERMO_SCK_PIN
 #define MAX6675_DO_PIN             THERMO_DO_PIN
 
+
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        PB1   // Heater0
+//#define HEATER_0_PIN                        PB1   // Heater0
 #define HEATER_1_PIN                        PA1   // Heater1
-#define HEATER_2_PIN                        PB0   // Heater2
+//#define HEATER_2_PIN                        PB0   // Heater2
+#define HEATER_0_PIN                        PB0   // Swapped
+#define HEATER_2_PIN                        PB1   // Seapped to use 50w heater and didnt want to unscrew hard to reach 0_PIN
+
+
 
 #if ENABLED(M5_EXTENDER)
   #define HEATER_3_PIN                      PD15  // M5 HEAT1

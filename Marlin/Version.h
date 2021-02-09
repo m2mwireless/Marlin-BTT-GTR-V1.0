@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "07" 
+#define COMPILE_VERSION "08(50w)" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,6 +37,21 @@
  * 
  * Vxx MM/DD/2021 HH:MM
 
+ * V09  02/08/2021 xx:xx
+ *      PID:TUNING:
+ * 
+ *       BED: @ 90C ( 50% FAN ON FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+ *          M301 E0 P13.31 I1.05 D42.31
+ *          #define DEFAULT_Kp 13.31
+ *          #define DEFAULT_Ki 1.05 
+ *          #define DEFAULT_Kd 42.31
+ * 
+ * V08  02/08/2021 18:09
+ *      
+ *      #define HEATER_0_PIN                        PB0   // Swapped - change back when we re-wire new heater element in to wiring
+ *      #define HEATER_2_PIN                        PB1   // Seapped to use 50w heater and didnt want to unscrew hard to reach 0_PIN
+ * 
+ *      
  * V07  02/08/2021 10:32
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1283.00, 6442.00, 6220.00, 6220.00 }
  * 
@@ -108,6 +123,9 @@
  *           #define DEFAULT_bedKi 19.48
  *           #define DEFAULT_bedKd 340.43
  * 
+ *          #define DEFAULT_Kp 13.31
+ *          #define DEFAULT_Ki 1.05 
+ *          #define DEFAULT_Kd 42.31 * 
  *      STEPPER CURRENT:
  *          #define X_CURRENT (Y, E0, E1)       800 
  *          #define Z_CURRENT (Z and Z1)       1250

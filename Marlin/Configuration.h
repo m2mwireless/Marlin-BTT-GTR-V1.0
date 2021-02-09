@@ -516,15 +516,19 @@
     //  BTT GTR V1.0  02/07/2021 @285 E0 40W ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
     //    #define DEFAULT_Kp 18.81, DEFAULT_Ki 1.69, DEFAULT_Kd 52.30
     //    M301 E0 P18.81 I1.69 D52.30
+    //  
+    //  BTT GTR V1.0  02/08/2021 @285 E0 50W ( FAN ON 50%   FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
+    //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
+    //    M301 E0 P13.31 I1.05 D42.31
     //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  18.81,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.69,   2.83 }
-    #define DEFAULT_Kd_LIST {  52.30,  95.09 }
+    #define DEFAULT_Kp_LIST {  13.31,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.05,   2.83 }
+    #define DEFAULT_Kd_LIST {  42.31,  95.09 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
