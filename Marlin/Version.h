@@ -38,6 +38,8 @@
  * Vxx MM/DD/2021 HH:MM
 
  * V09  02/08/2021 xx:xx
+*      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/09/2021
+
  *      PID:TUNING:
  * 
  *       BED: @ 90C ( 50% FAN ON FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )

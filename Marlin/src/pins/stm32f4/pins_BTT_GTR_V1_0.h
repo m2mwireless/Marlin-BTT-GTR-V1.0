@@ -335,6 +335,8 @@
 //#define HEATER_0_PIN                        PB1   // Heater0
 #define HEATER_1_PIN                        PA1   // Heater1
 //#define HEATER_2_PIN                        PB0   // Heater2
+
+// *** FIXME: *****
 #define HEATER_0_PIN                        PB0   // Swapped
 #define HEATER_2_PIN                        PB1   // Seapped to use 50w heater and didnt want to unscrew hard to reach 0_PIN
 
