@@ -37,9 +37,11 @@
  * 
  * Vxx MM/DD/2021 HH:MM
 
- * V09  02/08/2021 xx:xx
-*      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/09/2021
-
+ * V09  02/14/2021 13:45
+ *      ** NOTE ** SEE #08 = fix after re-wiring
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/14/2021
+ * 
  *      PID:TUNING:
  * 
  *       BED: @ 90C ( 50% FAN ON FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
@@ -48,8 +50,15 @@
  *          #define DEFAULT_Ki 1.05 
  *          #define DEFAULT_Kd 42.31
  * 
+ *      #define X_STALL_SENSITIVITY  76
+ *      #define Y_STALL_SENSITIVITY  76
+ * 
+ *      #define CONTROLLERFAN_SPEED_ACTIVE      39 // (0-255) Active speed, used when any motor is enabled
+ *      #define CONTROLLERFAN_SPEED_IDLE        18 // (0-255) Idle speed, used when motors are disabled
+ *   
  * V08  02/08/2021 18:09
  *      
+ *      ***** FIX ME     FIX ME     FIX ME   *******
  *      #define HEATER_0_PIN                        PB0   // Swapped - change back when we re-wire new heater element in to wiring
  *      #define HEATER_2_PIN                        PB1   // Seapped to use 50w heater and didnt want to unscrew hard to reach 0_PIN
  * 
