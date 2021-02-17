@@ -37,9 +37,15 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V11  02/16/2021 13:39
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/16/2021
+ * V11  02/17/2021 08:48
+ *      
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/17/2021
  *      ** TRANSFERED to NEW PC - GEORGIOU - RE-CLONED
+ *      
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1350.00, 1350.00, 6443.00, 6220.00, 6220.00 }
+ *          M92 X1350.00 Y1350.00 Z6443.00 ( was M92 X1282.00 Y1283.00 Z6442.00 )
+ * 
+ * 
  * 
  * V10  02/15/2021 10:39
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/15/2021
