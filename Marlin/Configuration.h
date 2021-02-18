@@ -807,7 +807,7 @@
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1350.00, 1350.00, 6443.00, 6220.00, 6220.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.0, 1285.0, 6446.00, 6220.00, 6220.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -829,8 +829,8 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
-//#define DEFAULT_MAX_ACCELERATION      { 600, 600, 40, 5000, 5000 }
+//#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 100, 10000, 10000 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)

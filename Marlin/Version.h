@@ -37,14 +37,13 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V11  02/17/2021 08:48
+ * V11  02/17/2021 09:28
  *      
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/17/2021
  *      ** TRANSFERED to NEW PC - GEORGIOU - RE-CLONED
  *      
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1350.00, 1350.00, 6443.00, 6220.00, 6220.00 }
- *          M92 X1350.00 Y1350.00 Z6443.00 ( was M92 X1282.00 Y1283.00 Z6442.00 )
- * 
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.25, 1285.25, 6446.00, 6220.00, 6220.00 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 100, 10000, 10000 }
  * 
  * 
  * V10  02/15/2021 10:39
@@ -117,7 +116,7 @@
  *          0.00234375 mm = 3 steps
  * 
  *          0.0078120  mm = 10 steps
- *          0.01000000 mm = 12.8 steps
+ *          0.01000000 mm = 12.8 steps *** WRONG  0.02421875 per step..   5 * 12.8 = 64. yielded +1.55mm on x,y axis. 
  *         *************************************************
  * 
  * 
