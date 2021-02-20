@@ -19,7 +19,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-.
 #pragma once
 
 
@@ -38,11 +37,13 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V12  02/18/2021 09:28
+ * V12  02/19/2021 11:01
  *      
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/18/2021
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/19/2021
  *          #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.20, 1285.10, 6444.00, 6220.00, 6220.00 }
  *          #define TMC_HOME_PHASE { 896, 896, 896 }
+ *          REMOVED:   //#define SQUARE_WAVE_STEPPING
+ *          #define LIN_ADVANCE_K 0.00   
  * 
  * V11  02/17/2021 09:28
  *      
