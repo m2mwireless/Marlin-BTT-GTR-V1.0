@@ -141,7 +141,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -814,7 +814,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50, 50 }
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
 
 
@@ -830,7 +830,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
-#define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 100, 10000, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 100, 9999, 9999 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)

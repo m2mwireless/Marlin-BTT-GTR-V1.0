@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "12" 
+#define COMPILE_VERSION "13" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,24 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+
  * 
+ * V13  02/21/2021 11:14
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/21/2021
+ * 
+ *      #define X_STALL_SENSITIVITY  70
+ *      #define Y_STALL_SENSITIVITY  70
+ *      #define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50, 50 }
+ *      REMOVED:   #define HOME_BEFORE_FILAMENT_CHANGE  
+ *      #define MANUAL_FEEDRATE { 70*60, 70*60, 6*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ * 
+ *      #define RX_BUFFER_SIZE 1024     
+ *           #define SERIAL_XON_XOFF
+ *      #define TX_BUFFER_SIZE 4
+ *      #define MAX_CMD_SIZE 128
+ *      #define BUFSIZE 8
+ *      READDED: #define SQUARE_WAVE_STEPPING
+ *            
  * V12  02/19/2021 11:01
  *      
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/19/2021
