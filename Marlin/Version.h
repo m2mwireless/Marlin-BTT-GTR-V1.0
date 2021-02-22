@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "13" 
+#define COMPILE_VERSION "14" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,8 +36,15 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
-
  * 
+ * V14  02/21/2021 18:43
+ * 
+ *      ** CORRECTED WIRING -->         ** NOTE ** SEE #08 = fix after re-wiring - DONE
+ * 
+ *      #define HEATER_0_PIN                        PB1   // Heater0
+ *      #define HEATER_1_PIN                        PA1   // Heater1
+ *      #define HEATER_2_PIN                        PB0   // Heater2
+
  * V13  02/21/2021 11:14
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/21/2021
  * 
