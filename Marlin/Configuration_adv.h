@@ -146,7 +146,7 @@
 #if TEMP_SENSOR_CHAMBER
   #define CHAMBER_MINTEMP             5
   #define CHAMBER_MAXTEMP            60
-  #define TEMP_CHAMBER_HYSTERESIS     1   // (°C) Temperature proximity considered "close enough" to the target
+  #define TEMP_CHAMBER_HYSTERESIS     2   // (°C) Temperature proximity considered "close enough" to the target
   #define CHAMBER_LIMIT_SWITCHING
 
   #define HEATER_CHAMBER_PIN          HEATER_6_PIN // #define HEATER_6_PIN                      PE13  // M5 HEAT4<- on M5 connector...  
@@ -162,12 +162,12 @@
       #define CHAMBER_FAN_BASE  255   // Chamber fan PWM (0-255)
 
     #elif CHAMBER_FAN_MODE == 1
-      #define CHAMBER_FAN_BASE  0   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
-      #define CHAMBER_FAN_FACTOR 20   // PWM increase per °C above target
+      #define CHAMBER_FAN_BASE    0   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
+      #define CHAMBER_FAN_FACTOR  5   // PWM increase per °C above target
 
     #elif CHAMBER_FAN_MODE == 2
-      #define CHAMBER_FAN_BASE  128   // Minimum chamber fan PWM (0-255)
-      #define CHAMBER_FAN_FACTOR 25   // PWM increase per °C difference from target
+      #define CHAMBER_FAN_BASE  0   // Minimum chamber fan PWM (0-255)
+      #define CHAMBER_FAN_FACTOR 5   // PWM increase per °C difference from target
     #endif
   #endif
 
@@ -2401,7 +2401,7 @@
 
   #if AXIS_IS_TMC(X)
     #define X_CURRENT       800        // (mA) RMS current. Multiply by 1.414 for peak current.
-    #define X_CURRENT_HOME  (X_CURRENT)  // (mA) RMS current for sensorless homing
+    #define X_CURRENT_HOME  (X_CURRENT/2)  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     256        // 0..256
     #define X_RSENSE          0.11
     #define X_CHAIN_POS      -1        // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
@@ -2419,7 +2419,7 @@
 
   #if AXIS_IS_TMC(Y)
     #define Y_CURRENT       800
-    #define Y_CURRENT_HOME  (Y_CURRENT)
+    #define Y_CURRENT_HOME  (Y_CURRENT/2)
     #define Y_MICROSTEPS     256
     #define Y_RSENSE          0.11
     #define Y_CHAIN_POS      -1
@@ -2715,7 +2715,9 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
-  #define SENSORLESS_HOMING // StallGuard capable drivers only
+
+//  #define SENSORLESS_HOMING // StallGuard capable drivers only
+
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
@@ -2746,7 +2748,7 @@
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
 //   #define TMC_HOME_PHASE { 128, 128, 128 }
-   #define TMC_HOME_PHASE { 896, 896, 896 }
+   #define TMC_HOME_PHASE { 896, 128, 384 }
 
   /**
    * Beta feature!

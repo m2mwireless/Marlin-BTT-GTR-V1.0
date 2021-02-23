@@ -26,16 +26,30 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "14" 
+#define COMPILE_VERSION "15" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
-#define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
-#define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"  // Name displayed in the LCD "Ready" message and Info menu
+#define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
+#define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
 #define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V15  02/22/2021 17:34
+ *      #define TMC_HOME_PHASE { 896, 128, 384 }
+ *      #define CHAMBER_FAN_MODE 1 
+ *          
+ *          #define CHAMBER_FAN_BASE  0     // Minimum chamber fan PWM (0-255)
+ *          #define CHAMBER_FAN_FACTOR 5   // PWM increase per °C difference from target
+ * 
+ *          #define TEMP_CHAMBER_HYSTERESIS     2
+ *      
+ *      REMOVED:  Going back to Limit Switches
+ *          //#define SENSORLESS_HOMING // StallGuard capable drivers only
+ *          #define Y_CURRENT_HOME  (Y_CURRENT/2)
+ *          #define X_CURRENT_HOME  (X_CURRENT/2)
  * 
  * V14  02/21/2021 18:43
  * 
