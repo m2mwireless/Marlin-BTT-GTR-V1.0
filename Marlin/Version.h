@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "15" 
+#define COMPILE_VERSION "16" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,6 +37,18 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V16  02/23/2021 15:04
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/23/2021
+ * 
+ *      #define CHAMBER_AUTO_FAN_TEMPERATURE 55
+ *      #define CHAMBER_AUTO_FAN_SPEED 255
+ *      #define CHAMBER_FAN_MODE 1
+ *      #define TEMP_CHAMBER_HYSTERESIS     2
+ *      ! //#define CHAMBER_LIMIT_SWITCHING
+ *     
+ *          #define CHAMBER_FAN_BASE    10       // Minimum chamber fan PWM (0-255)
+ *          #define CHAMBER_FAN_FACTOR  25       // PWM increase per °C difference from target
+ *  
  * V15  02/22/2021 17:34
  *      #define TMC_HOME_PHASE { 896, 128, 384 }
  *      #define CHAMBER_FAN_MODE 1 

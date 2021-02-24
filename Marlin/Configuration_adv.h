@@ -146,8 +146,9 @@
 #if TEMP_SENSOR_CHAMBER
   #define CHAMBER_MINTEMP             5
   #define CHAMBER_MAXTEMP            60
-  #define TEMP_CHAMBER_HYSTERESIS     2   // (°C) Temperature proximity considered "close enough" to the target
-  #define CHAMBER_LIMIT_SWITCHING
+  #define TEMP_CHAMBER_HYSTERESIS     1   // (°C) Temperature proximity considered "close enough" to the target
+  
+  //#define CHAMBER_LIMIT_SWITCHING
 
   #define HEATER_CHAMBER_PIN          HEATER_6_PIN // #define HEATER_6_PIN                      PE13  // M5 HEAT4<- on M5 connector...  
   #define HEATER_CHAMBER_INVERTING true
@@ -156,18 +157,18 @@
   #define CHAMBER_FAN               // Enable a fan on the chamber
   #if ENABLED(CHAMBER_FAN)
 
-    #define CHAMBER_FAN_MODE 1        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
+    #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
 
     #if CHAMBER_FAN_MODE == 0
       #define CHAMBER_FAN_BASE  255   // Chamber fan PWM (0-255)
 
     #elif CHAMBER_FAN_MODE == 1
       #define CHAMBER_FAN_BASE    0   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
-      #define CHAMBER_FAN_FACTOR  5   // PWM increase per °C above target
+      #define CHAMBER_FAN_FACTOR  1   // PWM increase per °C above target
 
     #elif CHAMBER_FAN_MODE == 2
-      #define CHAMBER_FAN_BASE  0   // Minimum chamber fan PWM (0-255)
-      #define CHAMBER_FAN_FACTOR 5   // PWM increase per °C difference from target
+      #define CHAMBER_FAN_BASE   10   // Minimum chamber fan PWM (0-255)
+      #define CHAMBER_FAN_FACTOR 25   // PWM increase per °C difference from target
     #endif
   #endif
 
@@ -525,7 +526,7 @@
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 40
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 
-#define CHAMBER_AUTO_FAN_TEMPERATURE 30
+#define CHAMBER_AUTO_FAN_TEMPERATURE 55
 #define CHAMBER_AUTO_FAN_SPEED 255
 
 /**
