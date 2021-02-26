@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "18" 
+#define COMPILE_VERSION "20" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,9 +37,23 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V20  02/26/2021 09:49
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/26/2021
+ *      #define TMC_HOME_PHASE { -1, -1, 896 } 
+ *      #define HOTEND_OFFSET_X { 0.0, -20.10 }     // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, 0.00 }       // (mm) relative Y-offset for each nozzle
+ *      //#define DETECT_BROKEN_ENDSTOP
+ *      //#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
+ *      #define X_BED_SIZE 235
+ *      #define Y_BED_SIZE 235 
+ *      #define Z_MAX_POS 220
+ *      #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MAX_POS - 10), 4 }       // Z was 20  
+ * V19  02/25/2021 19:22
+ *      #define INVERT_E0_DIR   false     // new temporary wiring ( was mispinned )
+ *  
  * V18  02/25/2021 15:46
  *      * New stepper adaptor wires installed.
- *      #define INVERT_Z_DIR false
+ *      #define INVERT_Z_DIR    false
  * 
  * V17  02/25/2021 14:40
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/25/2021
