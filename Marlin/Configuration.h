@@ -1251,7 +1251,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR true
+#define INVERT_Z_DIR false
 
 // @section extruder
 
@@ -1784,20 +1784,21 @@
       #define CUSTOM_USER_MENUS
  */
 
-#define PREHEAT_3_LABEL         "PM-NYLON"
-#define PREHEAT_3_TEMP_HOTEND   260
-#define PREHEAT_3_TEMP_BED      60
+#define PREHEAT_3_LABEL         "GD-HIPS"
+#define PREHEAT_3_TEMP_HOTEND   265
+#define PREHEAT_3_TEMP_BED      95
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL         "GD-HIPS"
-#define PREHEAT_4_TEMP_HOTEND   275
-#define PREHEAT_4_TEMP_BED      115
+#define PREHEAT_4_LABEL         "GD-PC"
+#define PREHEAT_4_TEMP_HOTEND   290
+#define PREHEAT_4_TEMP_BED      132
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL         "GD-PC"
-#define PREHEAT_5_TEMP_HOTEND   290
-#define PREHEAT_5_TEMP_BED      132
+#define PREHEAT_5_LABEL         "CoPA-NYLON"
+#define PREHEAT_5_TEMP_HOTEND   260
+#define PREHEAT_5_TEMP_BED      60
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
+
 
 /**
  * Nozzle Park

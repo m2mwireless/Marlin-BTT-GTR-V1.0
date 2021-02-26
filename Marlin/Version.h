@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "16" 
+#define COMPILE_VERSION "18" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,16 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V18  02/25/2021 15:46
+ *      * New stepper adaptor wires installed.
+ *      #define INVERT_Z_DIR false
+ * 
+ * V17  02/25/2021 14:40
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/25/2021
+ *       #define TMC_HOME_PHASE { 896, 128, 896 }
+ *      #define X_CURRENT_HOME  350  // (mA) RMS current for sensorless homing
+ *      #define Y_CURRENT_HOME  (Y_CURRENT/2)  // (mA) RMS current for sensorless homing
  * 
  * V16  02/23/2021 15:04
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/23/2021
