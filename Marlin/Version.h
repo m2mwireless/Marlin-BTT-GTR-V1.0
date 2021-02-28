@@ -37,17 +37,24 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V20  02/26/2021 09:49
+ * V20  02/26/2021 10:16
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/26/2021
- *      #define TMC_HOME_PHASE { -1, -1, 896 } 
- *      #define HOTEND_OFFSET_X { 0.0, -20.10 }     // (mm) relative X-offset for each nozzle
- *      #define HOTEND_OFFSET_Y { 0.0, 0.00 }       // (mm) relative Y-offset for each nozzle
+
+ *      M218 T1 X-20.15 Y0.00 Z0.000       // Hotend Offsets
+ * 
+ *      M301 E0 P13.32 I1.23 D36.19
+ *      M301 E1 P36.18 I3.52 D92.84
+ *      M304 P101.51 I18.41 D373.20 
+ * 
+ *      #define TMC_HOME_PHASE { -1, -1, -1 } 
+ * 
  *      //#define DETECT_BROKEN_ENDSTOP
  *      //#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
  *      #define X_BED_SIZE 235
  *      #define Y_BED_SIZE 235 
  *      #define Z_MAX_POS 220
  *      #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MAX_POS - 10), 4 }       // Z was 20  
+  *      
  * V19  02/25/2021 19:22
  *      #define INVERT_E0_DIR   false     // new temporary wiring ( was mispinned )
  *  

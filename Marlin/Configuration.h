@@ -320,11 +320,11 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-//#define HOTEND_OFFSET_X { 0.0, 0.00 } // (mm) relative X-offset for each nozzle
+//#define HOTEND_OFFSET_X { 0.0, -20.00 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
-#define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
-#define HOTEND_OFFSET_Y { 0.0, 0.00 }  // (mm) relative Y-offset for each nozzle
+//#define HOTEND_OFFSET_X { 0.0, -19.85 } // (mm) relative X-offset for each nozzle
+//#define HOTEND_OFFSET_Y { 0.0, 0.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
 // @section machine
@@ -534,14 +534,18 @@
     //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
     //    M301 E0 P13.31 I1.05 D42.31
     //
+    //    // 02/26/2021 
+    //    M301 E0 P13.32 I1.23 D36.19
+    //    M301 E1 P36.18 I3.52 D92.84
+    //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  13.31,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.05,   2.83 }
-    #define DEFAULT_Kd_LIST {  42.31,  95.09 }
+    #define DEFAULT_Kp_LIST {  13.32,  36.18 }
+    #define DEFAULT_Ki_LIST {   1.23,   3.52 }
+    #define DEFAULT_Kd_LIST {  36.19,  92.84 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -601,11 +605,14 @@
   // 02/07/2021 @ 90C ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
   // M304 P99.75 I19.48 D340.43
   // 
+  // 02/26/2021 
+  // M304 P101.51 I18.41 D373.20
+  //
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 99.75
-#define DEFAULT_bedKi 19.48
-#define DEFAULT_bedKd 340.43
+#define DEFAULT_bedKp 101.51
+#define DEFAULT_bedKi 18.41
+#define DEFAULT_bedKd 373.20
 
 #endif // PIDTEMPBED
 
