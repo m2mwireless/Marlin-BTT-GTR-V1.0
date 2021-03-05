@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "23" 
+#define COMPILE_VERSION "22" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,21 +36,22 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
- *  ** REVERTED TO 20 **
- * V20(b)  03/04/2021 16:37
  * 
- * V21  03/05/2021 17:15
- *      REVERTED TO V20 after bad issue with WAIT firmware stuck waiting for temp messages
+ * V22  03/05/2021 11:17
  * 
- * V20  02/26/2021 10:16
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/26/2021
-
+ *      ** RELOADED CLEAN TREE
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/05/2021
  *      M218 T1 X-20.15 Y0.00 Z0.000       // Hotend Offsets
- * V22  03/04/2021 16:23
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021 16:00
  *      #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
- *      #define TMC_HOME_PHASE { 896, 128, 128 }
+ *      #define TMC_HOME_PHASE { 128, 640, 640 }    // X=88, Y=89, Z=90
  *      #define LIN_ADVANCE_K 0.02
+ *      #define ENDSTOP_NOISE_THRESHOLD 2
+ *      #define DETECT_BROKEN_ENDSTOP
+ *      #define HOMING_FEEDRATE_MM_M { (85*60), (85*60), (9*60) }
+ *      #define MANUAL_FEEDRATE { 85*60, 85*60, 9*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ *      #define DEFAULT_MAX_FEEDRATE          { 300, 300, 12, 50, 50 }
+ * 
  * 
  * V21  03/04/2021 09:24
  *  

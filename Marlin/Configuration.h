@@ -529,7 +529,7 @@
     //  BTT GTR V1.0  02/08/2021 @285 E0 50W ( FAN ON 50%   FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
     //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
     //    M301 E0 P13.31 I1.05 D42.31
-f    //
+    //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
@@ -821,10 +821,10 @@ f    //
  *
  * :[2,3,4,5,6,7]
  */
-//#define ENDSTOP_NOISE_THRESHOLD 2
+#define ENDSTOP_NOISE_THRESHOLD 2
 
 // Check for stuck or disconnected endstops during homing moves.
-//#define DETECT_BROKEN_ENDSTOP
+#define DETECT_BROKEN_ENDSTOP
 
 //=============================================================================
 //============================== Movement Settings ============================
@@ -862,7 +862,7 @@ f    //
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50, 50 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 12, 50, 50 }
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
 
 
@@ -1645,7 +1645,7 @@ f    //
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (70*60), (70*60), (7*60) }
+#define HOMING_FEEDRATE_MM_M { (85*60), (85*60), (9*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
