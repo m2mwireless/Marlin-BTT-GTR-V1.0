@@ -58,18 +58,13 @@
  */
 
 //===========================================================================
-//============================= DELTA Printer ===============================
+//========================== DELTA / SCARA / TPARA ==========================
 //===========================================================================
-// For a Delta printer, start with one of the configuration files in the config/examples/delta directory
-// from https://github.com/MarlinFirmware/Configurations/branches/all and customize for your machine.
 //
-
-//===========================================================================
-//============================= SCARA Printer ===============================
-//===========================================================================
-// For a SCARA printer, start with one of the configuration files in the config/examples/SCARA directory
-// from https://github.com/MarlinFirmware/Configurations/branches/all and customize for your machine.
+// Download configurations from the link above and customize for your machine.
+// Examples are located in config/examples/delta, .../SCARA, and .../TPARA.
 //
+//===========================================================================
 
 // @section info
 
@@ -184,8 +179,8 @@
  *   PRUSA_MMU1      : Průša MMU1 (The "multiplexer" version)
  *   PRUSA_MMU2      : Průša MMU2
  *   PRUSA_MMU2S     : Průša MMU2S (Requires MK3S extruder with motion sensor, EXTRUDERS = 5)
- *   SMUFF_EMU_MMU2  : Technik Gegg SMUFF (Průša MMU2 emulation mode)
- *   SMUFF_EMU_MMU2S : Technik Gegg SMUFF (Průša MMU2S emulation mode)
+ *   SMUFF_EMU_MMU2  : Technik Gegg SMuFF (Průša MMU2 emulation mode)
+ *   SMUFF_EMU_MMU2S : Technik Gegg SMuFF (Průša MMU2S emulation mode)
  *
  * Requires NOZZLE_PARK_FEATURE to park print head in case MMU unit fails.
  * See additional options in Configuration_adv.h.
@@ -320,11 +315,12 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-//#define HOTEND_OFFSET_X { 0.0, -20.00 } // (mm) relative X-offset for each nozzle
+//#define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
+//#define HOTEND_OFFSET_X { 0.0, 0.00 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
-//#define HOTEND_OFFSET_X { 0.0, -19.85 } // (mm) relative X-offset for each nozzle
-//#define HOTEND_OFFSET_Y { 0.0, 0.00 }  // (mm) relative Y-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_Y { 0.0, 0.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
 // @section machine
@@ -461,7 +457,7 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
-#define TEMP_RESIDENCY_TIME     10  // (seconds) Time to wait for hotend to "settle" in M109
+#define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS          2  // (°C) Temperature proximity considered "close enough" to the target
 
@@ -533,19 +529,15 @@
     //  BTT GTR V1.0  02/08/2021 @285 E0 50W ( FAN ON 50%   FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
     //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
     //    M301 E0 P13.31 I1.05 D42.31
-    //
-    //    // 02/26/2021 
-    //    M301 E0 P13.32 I1.23 D36.19
-    //    M301 E1 P36.18 I3.52 D92.84
-    //
+f    //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  13.32,  36.18 }
-    #define DEFAULT_Ki_LIST {   1.23,   3.52 }
-    #define DEFAULT_Kd_LIST {  36.19,  92.84 }
+    #define DEFAULT_Kp_LIST {  16.82,  24.30 }
+    #define DEFAULT_Ki_LIST {   1.50,   2.61 }
+    #define DEFAULT_Kd_LIST {  47.06,  56.55 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -605,14 +597,11 @@
   // 02/07/2021 @ 90C ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
   // M304 P99.75 I19.48 D340.43
   // 
-  // 02/26/2021 
-  // M304 P101.51 I18.41 D373.20
-  //
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 101.51
-#define DEFAULT_bedKi 18.41
-#define DEFAULT_bedKd 373.20
+#define DEFAULT_bedKp 99.75
+#define DEFAULT_bedKi 19.48
+#define DEFAULT_bedKd 340.43
 
 #endif // PIDTEMPBED
 
@@ -905,13 +894,13 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+//#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+//#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+//#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-//#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
-//#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
-//#define DEFAULT_TRAVEL_ACCELERATION   675    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -946,7 +935,8 @@
  */
 #if DISABLED(CLASSIC_JERK)
 //  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
-  #define JUNCTION_DEVIATION_MM 0.08 // (mm) Distance from real junction edge
+//  #define JUNCTION_DEVIATION_MM 0.08 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.01 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1132,13 +1122,13 @@
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_SPEED (133*60)
+#define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST (4*60)
+#define Z_PROBE_FEEDRATE_FAST (4*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
 
 /**
  * Probe Activation Switch
@@ -1363,6 +1353,8 @@
   #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
+  //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
+                                          // This is automatically enabled for MIXING_EXTRUDERs.
 
   // Override individually if the runout sensors vary
   //#define FIL_RUNOUT1_STATE LOW
@@ -1397,8 +1389,9 @@
   //#define FIL_RUNOUT8_PULLUP
   //#define FIL_RUNOUT8_PULLDOWN
 
-  // Set one or more commands to execute on filament runout.
-  // (After 'M412 H' Marlin will ask the host to handle the process.)
+  // Commands to execute on filament runout.
+  // With multiple runout sensors use the %c placeholder for the current tool in commands (e.g., "M600 T%c")
+  // NOTE: After 'M412 H1' the host handles filament runout and this script does not apply.
   #define FILAMENT_RUNOUT_SCRIPT "M600"
 
   // After a runout is detected, continue printing this length of filament
@@ -2470,6 +2463,7 @@
 //#define DGUS_LCD_UI_ORIGIN
 //#define DGUS_LCD_UI_FYSETC
 //#define DGUS_LCD_UI_HIPRECY
+//#define DGUS_LCD_UI_MKS
 
 //
 // Touch-screen LCD for Malyan M200/M300 printers
@@ -2776,6 +2770,7 @@
   // Use a single NeoPixel LED for static (background) lighting
   //#define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
   //#define NEOPIXEL_BKGD_COLOR { 255, 255, 255, 0 } // R, G, B, W
+  //#define NEOPIXEL_BKGD_ALWAYS_ON                  // Keep the backlight on when other NeoPixels are off
 #endif
 
 /**
