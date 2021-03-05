@@ -315,11 +315,8 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-<<<<<<< HEAD
-#define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
-=======
+//#define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_X { 0.0, 0.00 } // (mm) relative X-offset for each nozzle
->>>>>>> parent of ebb2e80d47 (firmware_20)
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
@@ -518,9 +515,6 @@
    
     //////////////////////////////////////////
     //
-<<<<<<< HEAD
-    // E3D Chimera Head ( E0 - 50W, E1 - 40W )
-=======
     // E3D Chimera Head ( E0 - 40W, E1 30W )
     // E0 - 40w  11/15/2020 PS 25.25VDC
     //  M301 E0 P16.33 I1.28 D52.26
@@ -535,22 +529,15 @@
     //  BTT GTR V1.0  02/08/2021 @285 E0 50W ( FAN ON 50%   FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
     //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
     //    M301 E0 P13.31 I1.05 D42.31
->>>>>>> parent of ebb2e80d47 (firmware_20)
-    //
+f    //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-<<<<<<< HEAD
     #define DEFAULT_Kp_LIST {  16.82,  24.30 }
     #define DEFAULT_Ki_LIST {   1.50,   2.61 }
     #define DEFAULT_Kd_LIST {  47.06,  56.55 }
-=======
-    #define DEFAULT_Kp_LIST {  13.31,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.05,   2.83 }
-    #define DEFAULT_Kd_LIST {  42.31,  95.09 }
->>>>>>> parent of ebb2e80d47 (firmware_20)
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95

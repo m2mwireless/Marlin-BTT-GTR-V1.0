@@ -36,10 +36,12 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
-
+ *  ** REVERTED TO 20 **
+ * V20(b)  03/04/2021 16:37
+ * 
  * V22  03/04/2021 16:23
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021 16:00
- *      #define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
  *      #define TMC_HOME_PHASE { 896, 128, 128 }
  *      #define LIN_ADVANCE_K 0.02
  * 
