@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "22" 
+#define COMPILE_VERSION "23" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,9 +37,11 @@
  * 
  * Vxx MM/DD/2021 HH:MM
 
- * V22  03/04/2021 16:20
+ * V22  03/04/2021 16:23
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021 16:00
  *      #define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
  *      #define TMC_HOME_PHASE { 896, 128, 128 }
+ *      #define LIN_ADVANCE_K 0.02
  * 
  * V21  03/04/2021 09:24
  *  
@@ -50,7 +52,7 @@
  *              https://community.octoprint.org/t/loosing-connection-and-no-temp-readings-with-latest-marlin-firmware-bug-fix-2-0-x-29-01-2021/30125/14
  *          **********  D O    N O T    U S E   *******************
  * 
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021   09:00 AM
  *      Installed 40w heater in E1. New PID tuning.
  *          M301 E0 P16.82 I1.50 D47.06
  *          M301 E1 P24.30 I2.61 D56.55
