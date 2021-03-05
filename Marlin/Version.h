@@ -37,6 +37,9 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V21  03/05/2021 17:15
+ *      REVERTTED TO V20 after bad issue with WAIT firmware stuck waiting for temp messages
+ * 
  * V20  02/26/2021 10:16
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/26/2021
 
