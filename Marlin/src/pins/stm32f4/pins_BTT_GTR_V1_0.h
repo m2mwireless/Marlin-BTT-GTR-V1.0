@@ -38,8 +38,13 @@
 // USB Flash Drive support
 #define HAS_OTG_USB_HOST_SUPPORT
 
+
+
 #define TP                                        // Enable to define servo and probe pins
 #define M5_EXTENDER                               // The M5 extender is attached
+
+
+
 
 //
 // Servos
@@ -99,16 +104,28 @@
   #define Z_MAX_PIN                  E2_DIAG_PIN  // Z+
 #endif
 
+
+
+
+
 //
 // Pins on the extender
 //
 #if ENABLED(M5_EXTENDER)
   #define X2_STOP_PIN                       PI4   // M5 M1_STOP
-  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP
+  #define Y2_STOP_PIN                       PF12  // M5 M5_STOP   
   #define Z2_STOP_PIN                       PF4   // M5 M2_STOP
   #define Z3_STOP_PIN                       PI7   // M5 M4_STOP
   #define Z4_STOP_PIN                       PF6   // M5 M3_STOP
 #endif
+
+
+
+ 
+
+
+
+
 
 #if ENABLED(TP) && !defined(Z_MIN_PROBE_PIN)
   #define Z_MIN_PROBE_PIN                   PH11  // Z Probe must be PH11
@@ -159,11 +176,14 @@
   #define E2_CS_PIN                         PC12
 #endif
 
+
 #if ENABLED(M5_EXTENDER)
 
-  #define E3_STEP_PIN                       PF3
+  
+ #define E3_STEP_PIN                       PF3
   #define E3_DIR_PIN                        PG3
   #define E3_ENABLE_PIN                     PF8
+
   #ifndef E3_CS_PIN
     #define E3_CS_PIN                       PG4
   #endif
@@ -308,6 +328,7 @@
 #define MAX6675_SCK_PIN           THERMO_SCK_PIN
 #define MAX6675_DO_PIN             THERMO_DO_PIN
 
+
 //
 // Heaters / Fans
 //
@@ -315,27 +336,51 @@
 #define HEATER_1_PIN                        PA1   // Heater1
 #define HEATER_2_PIN                        PB0   // Heater2
 
+//#define HEATER_0_PIN                        PB0   // Swapped
+//#define HEATER_2_PIN                        PB1   // Seapped to use 50w heater and didnt want to unscrew hard to reach 0_PIN
+
+
+
 #if ENABLED(M5_EXTENDER)
   #define HEATER_3_PIN                      PD15  // M5 HEAT1
   #define HEATER_4_PIN                      PD13  // M5 HEAT2
   #define HEATER_5_PIN                      PD12  // M5 HEAT3
+
+  //HEATER_CHAMBER_PIN
   #define HEATER_6_PIN                      PE13  // M5 HEAT4
+
   #define HEATER_7_PIN                      PI6   // M5 HEAT5
 #endif
 
 #define HEATER_BED_PIN                      PA2   // Hotbed
 
-#define FAN_PIN                             PE5   // Fan0
-#define FAN1_PIN                            PE6   // Fan1
-#define FAN2_PIN                            PC8   // Fan2
+
+
+
+
+#define FAN_PIN                             PE5   // Fan0 - Part Cooling
+#define FAN1_PIN                            PE6   // Fan1 - Extruder Cooling
+#define FAN2_PIN                            PC8   // Fan2 - Chassis Fan
+
+
+
 
 #if ENABLED(M5_EXTENDER)
-  #define FAN3_PIN                          PI5   // M5 FAN1
+
+// CONTROLLER_FAN_PIN  PWM
+  #define FAN3_PIN                          PI5   // M5 FAN1   
   #define FAN4_PIN                          PE9   // M5 FAN2
   #define FAN5_PIN                          PE11  // M5 FAN3
   //#define FAN6_PIN                        PC9   // M5 FAN4
-  //#define FAN7_PIN                        PE14  // M5 FAN5
+
+// CASE_LIGHT_PIN  PWM
+  #define FAN7_PIN                        PE14  // M5 FAN5
+
 #endif
+
+
+
+
 
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION ONBOARD
@@ -376,6 +421,13 @@
  *               -----                                             -----
  *               EXP2                                              EXP1
  */
+
+
+
+
+
+
+
 
 //
 // LCDs and Controllers
