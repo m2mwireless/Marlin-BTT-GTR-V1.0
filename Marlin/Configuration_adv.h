@@ -2771,8 +2771,13 @@
    *
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
+<<<<<<< HEAD
    #define TMC_HOME_PHASE { 896, 128, 128 }
 
+=======
+//   #define TMC_HOME_PHASE { 128, 128, 128 }
+   #define TMC_HOME_PHASE { -1, -1, 896 }
+>>>>>>> parent of ebb2e80d47 (firmware_20)
 
   /**
    * Beta feature!
