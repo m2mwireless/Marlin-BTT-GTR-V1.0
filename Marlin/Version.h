@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "21" 
+#define COMPILE_VERSION "22" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,8 +37,25 @@
  * 
  * Vxx MM/DD/2021 HH:MM
 
- * V21  02/27/2021 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/27/2021
+ * V22  03/04/2021 16:20
+ *      #define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
+ *      #define TMC_HOME_PHASE { 896, 128, 128 }
+ * 
+ * V21  03/04/2021 09:24
+ *  
+ *          **********  D O    N O T    U S E   *******************
+ *              G O   B A C K   T O  V20   until code is fixed
+ *              BROKEN UPSREAM - SERIAL DOESNT WORK 
+ *              FIRMWARE STUCK IN "BUSY"
+ *              https://community.octoprint.org/t/loosing-connection-and-no-temp-readings-with-latest-marlin-firmware-bug-fix-2-0-x-29-01-2021/30125/14
+ *          **********  D O    N O T    U S E   *******************
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/04/2021
+ *      Installed 40w heater in E1. New PID tuning.
+ *          M301 E0 P16.82 I1.50 D47.06
+ *          M301 E1 P24.30 I2.61 D56.55
+ *      #define TEMP_RESIDENCY_TIME     5
+ * 
  * 
  * V20  02/26/2021 10:16
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  02/26/2021

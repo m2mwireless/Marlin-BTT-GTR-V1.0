@@ -315,7 +315,7 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-//#define HOTEND_OFFSET_X { 0.0, -20.00 } // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 //#define HOTEND_OFFSET_X { 0.0, -19.85 } // (mm) relative X-offset for each nozzle
@@ -456,7 +456,7 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
-#define TEMP_RESIDENCY_TIME     10  // (seconds) Time to wait for hotend to "settle" in M109
+#define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS          2  // (°C) Temperature proximity considered "close enough" to the target
 
@@ -514,33 +514,16 @@
    
     //////////////////////////////////////////
     //
-    // E3D Chimera Head ( E0 - 40W, E1 30W )
-    // E0 - 40w  11/15/2020 PS 25.25VDC
-    //  M301 E0 P16.33 I1.28 D52.26
-    //  
-    // BTT SKR PRO V1.1     E0 - 40w  01/17/2021 PS 25.25VDC  FAST_PWM_FAN_FREQUENCY  643
-    //  M301 E0 P21.14 I1.75 D63.94
-    //
-    //  BTT GTR V1.0  02/07/2021 @285 E0 40W ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
-    //    #define DEFAULT_Kp 18.81, DEFAULT_Ki 1.69, DEFAULT_Kd 52.30
-    //    M301 E0 P18.81 I1.69 D52.30
-    //  
-    //  BTT GTR V1.0  02/08/2021 @285 E0 50W ( FAN ON 50%   FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
-    //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
-    //    M301 E0 P13.31 I1.05 D42.31
-    //
-    //    // 02/26/2021 
-    //    M301 E0 P13.32 I1.23 D36.19
-    //    M301 E1 P36.18 I3.52 D92.84
+    // E3D Chimera Head ( E0 - 50W, E1 - 40W )
     //
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  13.32,  36.18 }
-    #define DEFAULT_Ki_LIST {   1.23,   3.52 }
-    #define DEFAULT_Kd_LIST {  36.19,  92.84 }
+    #define DEFAULT_Kp_LIST {  16.82,  24.30 }
+    #define DEFAULT_Ki_LIST {   1.50,   2.61 }
+    #define DEFAULT_Kd_LIST {  47.06,  56.55 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -900,13 +883,13 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+//#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+//#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+//#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-//#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
-//#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
-//#define DEFAULT_TRAVEL_ACCELERATION   675    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
