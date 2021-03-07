@@ -37,12 +37,25 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V23  03/DD/2021 HH:mm
- *      
+ * V23  03/07/2021 07:59
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/07/2021
+ *      #define HOTEND_OFFSET_X { 0.0, -20.20 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, 0.05 }  // (mm) relative Y-offset for each nozzle 
+ *      #define DEFAULT_MAX_FEEDRATE          { 300, 300, 15, 50, 50 }
+ *      #define X_CURRENT_HOME  ( X_CURRENT / 2 )  // (mA) RMS current for sensorless homing
+ *      #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MIN_POS + 10), 10 }
+ *      REMOVED:   #define HOME_BEFORE_FILAMENT_CHANGE           // If needed, home before parking for filament change
+ *      #define TOOLCHANGE_FILAMENT_SWAP
+ *      #define TOOLCHANGE_PARK
+ * 
+ *      #define RX_BUFFER_MONITOR
+ *      #define EXTRA_FAN_SPEED
+ *      #define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
  * 
  * V22  03/05/2021 11:17
  * 
- *      ** RELOADED CLEAN TREE
+ *      ** RELOADED CLEAN SOURCE TREE **
  * 
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/05/2021
  *      M218 T1 X-20.15 Y0.00 Z0.000       // Hotend Offsets
