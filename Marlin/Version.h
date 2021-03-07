@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "23" 
+#define COMPILE_VERSION "24" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,7 +36,13 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ *  
+ * V24  03/07/2021 09:01
  * 
+ *      REMOVED:  // #define TOOLCHANGE_PARK
+ *      #define X_BED_SIZE 247
+ *      #define Y_BED_SIZE 225 
+ * * 
  * V23  03/07/2021 07:59
  * 
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/07/2021
