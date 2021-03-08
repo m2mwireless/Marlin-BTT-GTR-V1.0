@@ -51,7 +51,7 @@
  *      M301 E0 P17.17 I1.57 D46.99
  *      M301 E1 P25.83 I2.58 D64.72
  * 
- *      #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_X { 0.0, -20.14 } // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0, -0.10 }  // (mm) relative Y-offset for each nozzle * 
  * 
  * V24  03/07/2021 09:01
