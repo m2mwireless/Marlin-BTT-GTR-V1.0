@@ -319,8 +319,8 @@
 //#define HOTEND_OFFSET_X { 0.0, 0.00 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
-#define HOTEND_OFFSET_X { 0.0, -20.20 } // (mm) relative X-offset for each nozzle
-#define HOTEND_OFFSET_Y { 0.0, 0.05 }  // (mm) relative Y-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_Y { 0.0, -0.10 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
 // @section machine
@@ -544,14 +544,16 @@
     //     #define DEFAULT_Kp 13.31, DEFAULT_Ki 1.05 , DEFAULT_Kd 42.31
     //    M301 E0 P13.31 I1.05 D42.31
     //
+    //  *      M301 E0 P17.17 I1.57 D46.99
+    //  *      M301 E1 P25.83 I2.58 D64.72
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  16.82,  24.30 }
-    #define DEFAULT_Ki_LIST {   1.50,   2.61 }
-    #define DEFAULT_Kd_LIST {  47.06,  56.55 }
+    #define DEFAULT_Kp_LIST {  17.17,  25.83 }
+    #define DEFAULT_Ki_LIST {   1.57,   2.58 }
+    #define DEFAULT_Kd_LIST {  46.99,  64.72 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -912,8 +914,8 @@
 //#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**

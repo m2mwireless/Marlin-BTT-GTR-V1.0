@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "24" 
+#define COMPILE_VERSION "26" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,7 +36,24 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
- *  
+ * 
+ * V26  03/08/2021 11:55
+ * 
+ *      ** REMOVED: MARLIN upstream bugfix-2.0(.7.2)  03/08/2021
+ * 
+ * V25  03/08/2021 11:46
+ * 
+ *      ** DOESNT BOOT - RESTARTS immediately
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/08/2021
+ * 
+ *      #define TOOLCHANGE_FS_EXTRA_PRIME          0  // (mm) Extra priming length
+ *      M301 E0 P17.17 I1.57 D46.99
+ *      M301 E1 P25.83 I2.58 D64.72
+ * 
+ *      #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, -0.10 }  // (mm) relative Y-offset for each nozzle * 
+ * 
  * V24  03/07/2021 09:01
  * 
  *      REMOVED:  // #define TOOLCHANGE_PARK
