@@ -21,9 +21,9 @@
  */
 #pragma once
 
-#include <HardwareSerial.h>
+#ifdef ARDUINO_ARCH_ESP32
 
-#include "../shared/Marduino.h"
+#include <HardwareSerial.h>
 #include "../../core/serial_hook.h"
 
 class FlushableHardwareSerial : public HardwareSerial {
@@ -32,3 +32,5 @@ public:
 };
 
 extern Serial0Type<FlushableHardwareSerial> flushableSerial;
+
+#endif // ARDUINO_ARCH_ESP32
