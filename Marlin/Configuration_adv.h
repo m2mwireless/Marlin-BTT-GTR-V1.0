@@ -167,7 +167,6 @@
 
   #define CHAMBER_FAN               // Enable a fan on the chamber
   #if ENABLED(CHAMBER_FAN)
-
     #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
 
     #if CHAMBER_FAN_MODE == 0
@@ -182,8 +181,6 @@
       #define CHAMBER_FAN_FACTOR 25   // PWM increase per °C difference from target
     #endif
   #endif
-
-
 
   //#define CHAMBER_VENT              // Enable a servo-controlled vent on the chamber
   #if ENABLED(CHAMBER_VENT)
@@ -594,7 +591,6 @@
 
   #define CASE_LIGHT_PIN                  FAN7_PIN   //  #define FAN7_PIN                        PE14  // M5 FAN5
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
-
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
   #define CASE_LIGHT_DEFAULT_BRIGHTNESS 105   // Set default power-up brightness (0-255, requires PWM pin)
   //#define CASE_LIGHT_NO_BRIGHTNESS          // Disable brightness control. Enable for non-PWM lighting.
@@ -1988,7 +1984,6 @@
  * Preparing your G-code: https://github.com/colinrgodsey/step-daemon
  */
 //#define DIRECT_STEPPING
-// NOTE: DIRECT_STEPPING is incompatible with LIN_ADVANCE. Enable in external planner if possible.
 
 /**
  * G38 Probe Target
@@ -2053,10 +2048,6 @@
 
 // Control heater 0 and heater 1 in parallel.
 //#define HEATERS_PARALLEL
-
-
-
-
 
 //===========================================================================
 //================================= Buffers =================================
@@ -2199,7 +2190,6 @@
     //#define RETRACT_SYNC_MIXING           // Retract and restore all mixing steppers simultaneously
   #endif
 #endif
-
 
 /**
  * Universal tool change settings.
@@ -3437,6 +3427,7 @@
 #define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
 //#define MEATPACK                // Support for MeatPack G-code compression (https://github.com/scottmudge/OctoPrint-MeatPack)
 
+//#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
 
 //#define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
 
