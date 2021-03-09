@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "28" 
+#define COMPILE_VERSION "29" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,10 +37,19 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V29  03/09/2021 10:39
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/09/2021
+ * 
+ *      M301 E0 P15.92 I1.42 D44.54     // M303 E0 C20 S215 U1
+ *      M301 E1 P23.81 I2.27 D62.51     // M303 E1 C20 S215 U1
+ * 
  * V28  03/09/2021 09:42
  * 
  *      CLEAN: Clean source tree
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/07/2021
+ * 
+ *      #define HOTEND_OFFSET_X { 0.0, -20.10 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle * 
  * 
  * V27  03/08/2021 16:49
  *      READDED:  #define TOOLCHANGE_FILAMENT_SWAP ( no retract or prime )
