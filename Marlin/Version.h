@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "26" 
+#define COMPILE_VERSION "27" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,13 +37,22 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V27  03/08/2021 16:49
+ *      READDED:  #define TOOLCHANGE_FILAMENT_SWAP ( no retract or prime )
+ *      #define HOTEND_OFFSET_X { 0.0, -20.09 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle * 
+ * 
+ *      #define TOOLCHANGE_FS_FAN                 1  // Fan index or -1 to skip
+ *      #define TOOLCHANGE_FS_FAN_SPEED          255  // 0-255
+ *      #define TOOLCHANGE_FS_FAN_TIME            10  // (seconds)
+ * 
  * V26  03/08/2021 11:55
  * 
  *      ** REMOVED: MARLIN upstream bugfix-2.0(.7.2)  03/08/2021
  * 
  * V25  03/08/2021 11:46
  * 
- *      ** DOESNT BOOT - RESTARTS immediately
+ *      ** DOESN'T BOOT - RESTARTS immediately
  * 
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/08/2021
  * 
