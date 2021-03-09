@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "27" 
+#define COMPILE_VERSION "28" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,11 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V28  03/09/2021 09:42
+ * 
+ *      CLEAN: Clean source tree
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/07/2021
  * 
  * V27  03/08/2021 16:49
  *      READDED:  #define TOOLCHANGE_FILAMENT_SWAP ( no retract or prime )
