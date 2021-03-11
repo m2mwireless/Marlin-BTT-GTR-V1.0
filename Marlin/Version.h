@@ -37,9 +37,10 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V30  03/10/2021 08:30
+ * V30  03/10/2021 08:28
  * 
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/09/2021
+ *          ** updates correct the serial boot init for TMC.
  *      
  *      #define HOTEND_OFFSET_X { 0.0, -20.12 } // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle * 
