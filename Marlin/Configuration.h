@@ -319,7 +319,7 @@
 //#define HOTEND_OFFSET_X { 0.0, 0.00 } // (mm) relative X-offset for each nozzle
 //#define HOTEND_OFFSET_Y { 0.0, 5.00 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
-#define HOTEND_OFFSET_X { 0.0, -20.12 } // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
 #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle
 //#define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
@@ -1651,7 +1651,7 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (85*60), (85*60), (9*60) }
+#define HOMING_FEEDRATE_MM_M { (90*60), (90*60), (11*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS

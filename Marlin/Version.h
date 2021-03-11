@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "31" 
+#define COMPILE_VERSION "32" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,21 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V31  03/11/2021 10:49
+ * 
+ *      ENABLED:  #define TMC_HOME_PHASE { 128, 640, 640 }  // added noise filter ( 100 nf cap) to Z endstop switch
+ * 
+ *      #define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle * 
+ * 
+ *      #define HOMING_FEEDRATE_MM_M { (90*60), (90*60), (11*60) }
+ *      #define MANUAL_FEEDRATE { 90*60, 90*60, 11*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ * 
+ *      #define SENSORLESS_BACKOFF_MM  { 2, 2 }       // (mm) Backoff from endstops before sensorless homing
+ *      #define HOMING_BUMP_MM      { 5, 5, 5 }       // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 4, 4, 8 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      #define HOMING_BACKOFF_POST_MM { 2, 2, 2 }    // (mm) Backoff from endstops after homing
  * 
  * V31  03/10/2021 17:58
  * 
