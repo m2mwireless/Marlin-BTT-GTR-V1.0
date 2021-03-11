@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "30" 
+#define COMPILE_VERSION "31" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,12 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V31  03/10/2021 17:58
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/10/2021
+ *      REMOVED: #define TMC_HOME_PHASE { 128, 640, 640 }
+ *      ADDED: #define SQUARE_WAVE_STEPPING
  * 
  * V30  03/10/2021 08:28
  * 

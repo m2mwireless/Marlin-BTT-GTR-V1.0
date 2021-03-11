@@ -2802,13 +2802,13 @@
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
    // X=88, Y=89, Z=90
-   #define TMC_HOME_PHASE { 128, 640, 640 }
+   //#define TMC_HOME_PHASE { 128, 640, 640 }
 
   /**
    * Beta feature!
    * Create a 50/50 square wave step pulse optimal for stepper drivers.
    */
-  //#define SQUARE_WAVE_STEPPING
+  #define SQUARE_WAVE_STEPPING
 
   /**
    * Enable M122 debugging command for TMC stepper drivers.
