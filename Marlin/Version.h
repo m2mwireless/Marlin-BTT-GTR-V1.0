@@ -37,9 +37,26 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V33  03/12/2021 16:45
+ * V33  03/12/2021 16:38
+ *  
  *      #define HOTEND_OFFSET_X { 0.0, -20.05 }  // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0,  -0.12 }  // (mm) relative Y-offset for each nozzle * 
+ *      
+ *      // Disable pullup on Z only - added HC-89 Optical Endstop to Z AXIS ONLY (for now x,y come later)
+ *      //#define ENDSTOPPULLUPS
+ *      #if DISABLED(ENDSTOPPULLUPS)
+ *      // Disable ENDSTOPPULLUPS to set pullups individually
+ *      #define ENDSTOPPULLUP_XMAX
+ *      #define ENDSTOPPULLUP_YMAX
+ *      //#define ENDSTOPPULLUP_ZMAX
+ *      #define ENDSTOPPULLUP_XMIN
+ *      #define ENDSTOPPULLUP_YMIN
+ *      //#define ENDSTOPPULLUP_ZMIN
+ *      //#define ENDSTOPPULLUP_ZMIN_PROBE
+ *      #endif * 
+ * 
+ *      #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop for HC-89 Optical board.
+ * 
  * 
  * V32  03/11/2021 11:07
  * 
