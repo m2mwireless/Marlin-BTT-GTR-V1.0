@@ -37,10 +37,13 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V33  03/12/2021 16:38
- *  
+ * V33  03/13/2021 09:09
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/13/2021
+ *      // * Host Action Commands were added
+ * 
  *      #define HOTEND_OFFSET_X { 0.0, -20.05 }  // (mm) relative X-offset for each nozzle
- *      #define HOTEND_OFFSET_Y { 0.0,  -0.12 }  // (mm) relative Y-offset for each nozzle * 
+ *      #define HOTEND_OFFSET_Y { 0.0,  0.05 }  // (mm) relative Y-offset for each nozzle * 
  *      
  *      // Disable pullup on Z only - added HC-89 Optical Endstop to Z AXIS ONLY (for now x,y come later)
  *      //#define ENDSTOPPULLUPS
