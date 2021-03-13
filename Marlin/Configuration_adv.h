@@ -3506,42 +3506,35 @@
   #define CUSTOM_USER_MENU_TITLE "PRESETS"
   #define USER_SCRIPT_DONE "M117 User Script Done"
   #define USER_SCRIPT_AUDIBLE_FEEDBACK
-  #define USER_SCRIPT_RETURN  // Return to status screen after a script
+  //#define USER_SCRIPT_RETURN    // Return to status screen after a script
+  #define CUSTOM_MENU_ONLY_IDLE   // Only show custom menu when the machine is idle
 
 /*
   #define USER_DESC_1 "Home & UBL Info"
   #define USER_GCODE_1 "G28\nG29W"
+  //#define USER_CONFIRM_1        // Show a confirmation dialog before this action
 
   #define USER_DESC_2 "Preheat for " PREHEAT_1_LABEL
   #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
+  //#define USER_CONFIRM_2
 
   #define USER_DESC_3 "Preheat for " PREHEAT_2_LABEL
   #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  //#define USER_CONFIRM_3
 
   #define USER_DESC_4 "Heat Bed/Home/Level"
   #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+  //#define USER_CONFIRM_4
 
   #define USER_DESC_5 "Home & Info"
   #define USER_GCODE_5 "G28\nM503"
+  //#define USER_CONFIRM_5
   */
- //  Defines are on Configuration.h (// Preheat Constants)
-
-  #define USER_DESC_1 "Preheat " PREHEAT_1_LABEL
-  #define USER_GCODE_1 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
- 
-  #define USER_DESC_2 "Preheat " PREHEAT_2_LABEL
-  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
-  
-  #define USER_DESC_3 "Preheat " PREHEAT_3_LABEL
-  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
-  
-  #define USER_DESC_4 "Preheat " PREHEAT_4_LABEL
-  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND)
- 
-  #define USER_DESC_5 "Preheat " PREHEAT_5_LABEL
-  #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_5_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_5_TEMP_HOTEND)
- 
 #endif
+
+
+
+
 
 /**
  * Host Action Commands
