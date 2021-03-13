@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "33" 
+#define COMPILE_VERSION "34" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,17 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V34  03/13/2021 11:37
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/13/2021
+ *      #define TMC_HOME_PHASE { 128, 640, 896 }
+ *      #define HOTEND_OFFSET_X { 0.0, -20.35 }  // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0,  -0.07 }  // (mm) relative Y-offset for each nozzle * 
+ *      #define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109
+ *      #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
+ *      #define TEMP_HYSTERESIS          2  // (°C) Temperature proximity considered "close enough" to the target
+ * 
  * 
  * V33  03/13/2021 09:09
  * 
