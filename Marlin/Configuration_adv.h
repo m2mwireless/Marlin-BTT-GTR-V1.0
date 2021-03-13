@@ -2802,7 +2802,7 @@
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
    // X=88, Y=89, Z=90
- #define TMC_HOME_PHASE { 128, 640, 640 }
+ #define TMC_HOME_PHASE { 128, 640, 128 }
 
   /**
    * Beta feature!

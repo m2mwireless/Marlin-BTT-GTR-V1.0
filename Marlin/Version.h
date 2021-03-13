@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "32" 
+#define COMPILE_VERSION "33" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,9 +37,13 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V31  03/11/2021 10:49
+ * V33  03/12/2021 16:45
+ *      #define HOTEND_OFFSET_X { 0.0, -20.05 }  // (mm) relative X-offset for each nozzle
+ *      #define HOTEND_OFFSET_Y { 0.0,  -0.12 }  // (mm) relative Y-offset for each nozzle * 
  * 
- *      ENABLED:  #define TMC_HOME_PHASE { 128, 640, 640 }  // added noise filter ( 100 nf cap) to Z endstop switch
+ * V32  03/11/2021 11:07
+ * 
+ *      ENABLED:  #define TMC_HOME_PHASE { 128, 640, 128 }  // added noise filter ( 100 nf cap) to Z endstop switch
  * 
  *      #define HOTEND_OFFSET_X { 0.0, -20.15 } // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0, -0.11 }  // (mm) relative Y-offset for each nozzle * 
