@@ -2454,7 +2454,7 @@
   #define INTERPOLATE      true
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT       800        // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT       850        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  ( X_CURRENT / 2 )  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     256        // 0..256
     #define X_RSENSE          0.11
@@ -2472,7 +2472,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT       800
+    #define Y_CURRENT       850
     #define Y_CURRENT_HOME  ( Y_CURRENT / 2 )
     #define Y_MICROSTEPS     256
     #define Y_RSENSE          0.11
@@ -2802,7 +2802,7 @@
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
    // X=88, Y=89, Z=90
- #define TMC_HOME_PHASE { 128, 640, 896 }
+ #define TMC_HOME_PHASE { 128, 640, 128 }
 
   /**
    * Beta feature!
