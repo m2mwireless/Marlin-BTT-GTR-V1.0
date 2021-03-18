@@ -38,6 +38,7 @@
  * Vxx MM/DD/2021 HH:MM
  * 
  * V35  03/xx/2021 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/17/2021
  *      #define HOTEND_OFFSET_X { 0.0, -19.90 }  // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0,  -0.20 }  // (mm) relative Y-offset for each nozzle
  *      #define TMC_HOME_PHASE { 128, 640, 128 }
