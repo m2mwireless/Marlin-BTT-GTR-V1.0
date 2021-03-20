@@ -43,7 +43,13 @@
  *      #define HOTEND_OFFSET_X { 0.0, -20.00 }  // (mm) relative X-offset for each nozzle
  *      #define HOTEND_OFFSET_Y { 0.0,  -0.12 }  // (mm) relative Y-offset for each nozzle
  *      #define TMC_HOME_PHASE { 640, 640, 640 }
- * 
+ *      #define DEFAULT_MAX_FEEDRATE          { 300, 300, 15, 100, 100 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 150, 9999, 9999 }
+ *      #define DEFAULT_ACCELERATION          2250    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  2250    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   2750    // X, Y, Z acceleration for travel (non printing) moves  
+ *      #define E0/E1_CURRENT      850
+ *       
  * V35  03/18/2021 10:21
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/18/2021
  *      #define HOTEND_OFFSET_X { 0.0, -19.90 }  // (mm) relative X-offset for each nozzle
