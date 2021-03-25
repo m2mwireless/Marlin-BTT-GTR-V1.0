@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "37" 
+#define COMPILE_VERSION "38" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,13 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V38  03/25/2021 10:44
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/25/2021
+ *      #define NOZZLE_CLEAN_FEATURE
+ *      ADDED: #define CUSTOM_MENU_MAIN ( 5 pre sets )
+ *          #define NOZZLE_CLEAN_START_POINT { {  -20, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) },  {  20, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) }}
+ *          #define NOZZLE_CLEAN_END_POINT   { {  -20+70, (Y_BED_SIZE / 2)+30, (Z_MIN_POS + 1) },  {  20+70, (Y_BED_SIZE / 2)+30, (Z_MIN_POS + 1) }}
  * 
  * V37  03/24/2021 19:32
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/24/2021
