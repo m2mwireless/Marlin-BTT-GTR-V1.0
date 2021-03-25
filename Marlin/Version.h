@@ -31,13 +31,20 @@
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
 #define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
-#define MACHINE_NAME "JAM-ENG Ender3pro"
+#define MACHINE_NAME "JAM-ENG Ender3 pro"
 
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V37  03/xx/2021 xx:xx
+ * V37  03/24/2021 19:32
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/24/2021
+ *      #define HOTEND_OFFSET_X { 0.0, -20.00 }  // (mm) relative X-offset for each nozzle      <! PERFECT!!
+ *      #define HOTEND_OFFSET_Y { 0.0,  -0.13 }  // (mm) relative Y-offset for each nozzle
+ *      #define MANUAL_FEEDRATE { 100*60, 100*60, 15*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ *      #define HOMING_FEEDRATE_MM_M { 100*60), (100*60), (15*60) }
+ *      #define CUSTOM_MENU_MAIN
+ *      ////#define CUSTOM_MENU_CONFIG
  * 
  * V36  03/20/2021 08:21
  * 

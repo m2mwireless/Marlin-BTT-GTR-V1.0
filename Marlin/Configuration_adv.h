@@ -1145,7 +1145,7 @@
 
 #if EITHER(IS_ULTIPANEL, EXTENSIBLE_UI)
 //  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
-  #define MANUAL_FEEDRATE { 90*60, 90*60, 12*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+  #define MANUAL_FEEDRATE { 100*60, 100*60, 15*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
   #define FINE_MANUAL_MOVE 0.025    // (mm) Smallest manual move (< 0.1mm) applying to Z on most machines
   #if IS_ULTIPANEL
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
@@ -3453,11 +3453,18 @@
 //#define PAREN_COMMENTS      // Support for parentheses-delimited comments
 //#define GCODE_MOTION_MODES  // Remember the motion mode (G0 G1 G2 G3 G5 G38.X) and apply for X Y Z E F, etc.
 
+
+
+
 // Enable and set a (default) feedrate for all G0 moves
-//#define G0_FEEDRATE 3000 // (mm/min)
+#define G0_FEEDRATE 3000 // (mm/min)
+//#define G0_FEEDRATE 4200 // (mm/min)
 #ifdef G0_FEEDRATE
   //#define VARIABLE_G0_FEEDRATE // The G0 feedrate is set by F in G0 motion mode
 #endif
+
+
+
 
 /**
  * Startup commands
@@ -3478,18 +3485,22 @@
   #define GCODE_MACROS_SLOT_SIZE  50  // Maximum length of a single macro
 #endif
 
+
+
+
+
 /**
  * User-defined menu items to run custom G-code.
  * Up to 25 may be defined, but the actual number is LCD-dependent.
  */
 
 // Custom Menu: Main Menu
-//#define CUSTOM_MENU_MAIN
+#define CUSTOM_MENU_MAIN
 #if ENABLED(CUSTOM_MENU_MAIN)
   //#define CUSTOM_MENU_MAIN_TITLE "Custom Commands"
   #define CUSTOM_MENU_MAIN_SCRIPT_DONE "M117 User Script Done"
   #define CUSTOM_MENU_MAIN_SCRIPT_AUDIBLE_FEEDBACK
-  //#define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
+  #define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
   #define CUSTOM_MENU_MAIN_ONLY_IDLE         // Only show custom menu when the machine is idle
 
   #define MAIN_MENU_ITEM_1_DESC "Home & UBL Info"
@@ -3500,18 +3511,20 @@
   #define MAIN_MENU_ITEM_2_GCODE "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
   //#define MAIN_MENU_ITEM_2_CONFIRM
 
-  //#define MAIN_MENU_ITEM_3_DESC "Preheat for " PREHEAT_2_LABEL
-  //#define MAIN_MENU_ITEM_3_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  #define MAIN_MENU_ITEM_3_DESC "Preheat for " PREHEAT_2_LABEL
+  #define MAIN_MENU_ITEM_3_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
   //#define MAIN_MENU_ITEM_3_CONFIRM
 
-  //#define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
-  //#define MAIN_MENU_ITEM_4_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
-  //#define MAIN_MENU_ITEM_4_CONFIRM
+  #define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
+  #define MAIN_MENU_ITEM_4_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+  #define MAIN_MENU_ITEM_4_CONFIRM
 
-  //#define MAIN_MENU_ITEM_5_DESC "Home & Info"
-  //#define MAIN_MENU_ITEM_5_GCODE "G28\nM503"
-  //#define MAIN_MENU_ITEM_5_CONFIRM
+  #define MAIN_MENU_ITEM_5_DESC "Home & Info"
+  #define MAIN_MENU_ITEM_5_GCODE "G28\nM503"
+  #define MAIN_MENU_ITEM_5_CONFIRM
 #endif
+
+
 
 // Custom Menu: Configuration Menu
 //#define CUSTOM_MENU_CONFIG
@@ -3543,11 +3556,14 @@
   //#define CONFIG_MENU_ITEM_5_CONFIRM
 #endif
 
+
+
+
 /**
  * User-defined buttons to run custom G-code.
  * Up to 25 may be defined.
  */
-//#define CUSTOM_USER_BUTTONS
+#define CUSTOM_USER_BUTTONS
 #if ENABLED(CUSTOM_USER_BUTTONS)
   //#define BUTTON1_PIN -1
   #if PIN_EXISTS(BUTTON1_PIN)
@@ -3572,41 +3588,6 @@
     #define BUTTON3_GCODE         "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
     #define BUTTON3_DESC          "Preheat for " PREHEAT_2_LABEL
   #endif
-#endif
-
-/**
- * User-defined menu items to run custom G-code.
- * Up to 25 may be defined, but the actual number is LCD-dependent.
- */
-#define CUSTOM_USER_MENUS
-#if ENABLED(CUSTOM_USER_MENUS)
-  #define CUSTOM_USER_MENU_TITLE "PRESETS"
-  #define USER_SCRIPT_DONE "M117 User Script Done"
-  #define USER_SCRIPT_AUDIBLE_FEEDBACK
-  //#define USER_SCRIPT_RETURN    // Return to status screen after a script
-  #define CUSTOM_MENU_ONLY_IDLE   // Only show custom menu when the machine is idle
-
-/*
-  #define USER_DESC_1 "Home & UBL Info"
-  #define USER_GCODE_1 "G28\nG29W"
-  //#define USER_CONFIRM_1        // Show a confirmation dialog before this action
-
-  #define USER_DESC_2 "Preheat for " PREHEAT_1_LABEL
-  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
-  //#define USER_CONFIRM_2
-
-  #define USER_DESC_3 "Preheat for " PREHEAT_2_LABEL
-  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
-  //#define USER_CONFIRM_3
-
-  #define USER_DESC_4 "Heat Bed/Home/Level"
-  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
-  //#define USER_CONFIRM_4
-
-  #define USER_DESC_5 "Home & Info"
-  #define USER_GCODE_5 "G28\nM503"
-  //#define USER_CONFIRM_5
-  */
 #endif
 
 
