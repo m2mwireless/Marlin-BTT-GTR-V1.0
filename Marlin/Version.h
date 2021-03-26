@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "38" 
+#define COMPILE_VERSION "39" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,6 +37,13 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V39  03/26/2021 10:30
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/26/2021
+ *      #define CHAMBER_CHECK_INTERVAL 2000   
+ *      #elif CHAMBER_FAN_MODE == 2
+ *          #define CHAMBER_FAN_BASE   0   // Minimum chamber fan PWM (0-255)
+ *          #define CHAMBER_FAN_FACTOR 5   // PWM increase per °C difference from target
+ *      
  * V38  03/25/2021 10:44
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/25/2021
  *      #define NOZZLE_CLEAN_FEATURE
