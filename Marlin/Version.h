@@ -37,12 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V39  03/26/2021 10:30
+ * V39  03/26/2021 11:04
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/26/2021
  *      #define CHAMBER_CHECK_INTERVAL 2000   
- *      #elif CHAMBER_FAN_MODE == 2
+ *      #elif CHAMBER_FAN_MODE == 1
  *          #define CHAMBER_FAN_BASE   0   // Minimum chamber fan PWM (0-255)
- *          #define CHAMBER_FAN_FACTOR 5   // PWM increase per °C difference from target
+ *          #define CHAMBER_FAN_FACTOR 3   // PWM increase per °C difference from target
  *      
  * V38  03/25/2021 10:44
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/25/2021

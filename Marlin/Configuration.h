@@ -1788,14 +1788,14 @@
 //
 
 #define PREHEAT_1_LABEL       "PLA-PRO"
-#define PREHEAT_1_TEMP_HOTEND 225
+#define PREHEAT_1_TEMP_HOTEND 220
 #define PREHEAT_1_TEMP_BED     45
 #define PREHEAT_1_TEMP_CHAMBER 0
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "GD-ABS"
 #define PREHEAT_2_TEMP_HOTEND 245
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_BED    105
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
