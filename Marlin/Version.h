@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "41" 
+#define COMPILE_VERSION "42" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,33 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V42  04/02/2021 15:41
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/02/2021
+ *          ** platformio.ini got split up in to processor types and put in to ./ini folder
+ *      #define HOMING_BUMP_MM      { 3, 3, 5 }       // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 1, 1, 7 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      #define HOMING_BACKOFF_POST_MM { 0, 0, 7 }    // (mm) Backoff from endstops after homing
+ *      ** ADDED: 
+ *          X Axis Optical Endstop
+ * 
+ *          // Disable pullup on X - added HC-89 Optical Endstop to X AXIS  ( Y come later)
+ *          //#define ENDSTOPPULLUPS
+ *          #if DISABLED(ENDSTOPPULLUPS)
+ *          // Disable ENDSTOPPULLUPS to set pullups individually
+ *              //#define ENDSTOPPULLUP_XMAX
+ *              #define ENDSTOPPULLUP_YMAX
+ *              //#define ENDSTOPPULLUP_ZMAX
+ * 
+ *          //#define ENDSTOPPULLUP_XMIN
+ *          #define ENDSTOPPULLUP_YMIN
+ *          //#define ENDSTOPPULLUP_ZMIN
+ *          //#define ENDSTOPPULLUP_ZMIN_PROBE
+ * 
+ *      #define X_MIN_ENDSTOP_INVERTING true // Set to false FOR X
+ *      #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop for HC-89 Optical board.
+ *         /#define DETECT_BROKEN_ENDSTOP
+ *         /#define ENDSTOP_NOISE_THRESHOLD 2
  * 
  * V41  04/01/2021 13:10
  * 
@@ -129,7 +156,7 @@
  *      //#define ENDSTOPPULLUP_ZMIN
  *      //#define ENDSTOPPULLUP_ZMIN_PROBE
  *      #endif * 
- * 
+ *      
  *      #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop for HC-89 Optical board.
  * 
  * 

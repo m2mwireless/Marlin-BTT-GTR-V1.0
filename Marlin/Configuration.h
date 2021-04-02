@@ -770,11 +770,13 @@
 //#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
 // Disable ENDSTOPPULLUPS to set pullups individually
-#define ENDSTOPPULLUP_XMAX
+//#define ENDSTOPPULLUP_XMAX
 #define ENDSTOPPULLUP_YMAX
 //#define ENDSTOPPULLUP_ZMAX
+
 #define ENDSTOPPULLUP_XMIN
 #define ENDSTOPPULLUP_YMIN
+
 //#define ENDSTOPPULLUP_ZMIN
 //#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
@@ -795,13 +797,15 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-
 //#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+
+#define X_MIN_ENDSTOP_INVERTING true // HC-89 Optical board on X AXIS.
 #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop for HC-89 Optical board.
 
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
@@ -863,10 +867,10 @@
  *
  * :[2,3,4,5,6,7]
  */
-//#define ENDSTOP_NOISE_THRESHOLD 2
+#define ENDSTOP_NOISE_THRESHOLD 2
 
 // Check for stuck or disconnected endstops during homing moves.
-//#define DETECT_BROKEN_ENDSTOP
+#define DETECT_BROKEN_ENDSTOP
 
 //=============================================================================
 //============================== Movement Settings ============================
