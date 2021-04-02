@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "40" 
+#define COMPILE_VERSION "41" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,18 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V41  04/01/2021 13:10
+ * 
+ *      #define X_CURRENT_HOME  ( X_CURRENT / 2 )  // (mA) RMS current for sensorless homing
+ *      #define HOMING_BUMP_MM      { 5, 5, 5 }      
+ *      #define HOMING_BUMP_DIVISOR { 0, 0, 8 }  
+ *      #define HOMING_BACKOFF_POST_MM { 0, 0, 5 }  
+ *      #define SENSORLESS_BACKOFF_MM  { 0, 0 }  
+ * 
+ *      REMOVED:
+ *          //#define DETECT_BROKEN_ENDSTOP
+ *          //#define ENDSTOP_NOISE_THRESHOLD 2
  * 
  * V40  03/31/2021 12:04
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  03/31/2021
