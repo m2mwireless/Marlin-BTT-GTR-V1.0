@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "42" 
+#define COMPILE_VERSION "43" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,16 +37,29 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V43  04/09/2021 10:50
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/09/2021
+ *      #define HOMING_BACKOFF_POST_MM { 0, 0, 10 }    // (mm) Backoff from endstops after homing
+
+ *      #define DEFAULT_MAX_FEEDRATE          { 250, 250, 17, 250, 250 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 3500, 3500, 250, 9999, 9999 }
+ *      #define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   3500    // X, Y, Z acceleration for travel (non printing) moves  
+ *      #define X/E1_CURRENT        660
+ *      #define X_CURRENT           800 
+ *      #define Y_CURRENT           800 
+ * 
  * V42  04/02/2021 15:41
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/02/2021
  *          ** platformio.ini got split up in to processor types and put in to ./ini folder
- *      #define HOMING_BUMP_MM      { 3, 3, 5 }       // (mm) Backoff from endstops after first bump
- *      #define HOMING_BUMP_DIVISOR { 1, 1, 7 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      #define HOMING_BUMP_MM      { 0, 0, 5 }       // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 2, 2, 7 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
  *      #define HOMING_BACKOFF_POST_MM { 0, 0, 7 }    // (mm) Backoff from endstops after homing
  *      ** ADDED: 
  *          X Axis Optical Endstop
  * 
- *          // Disable pullup on X - added HC-89 Optical Endstop to X AXIS  ( Y come later)
+ *          // Disable pullup on X - added HC-89 Optical Endstop to X AXIS  ( Y to be added later - need to desing/print mount )
  *          //#define ENDSTOPPULLUPS
  *          #if DISABLED(ENDSTOPPULLUPS)
  *          // Disable ENDSTOPPULLUPS to set pullups individually
