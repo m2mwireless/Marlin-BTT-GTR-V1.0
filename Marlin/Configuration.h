@@ -1694,7 +1694,7 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (90*60), (90*60), (15*60) }
+#define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (17*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1812,9 +1812,9 @@
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "GD-ABS"
-#define PREHEAT_2_TEMP_HOTEND 245
-#define PREHEAT_2_TEMP_BED    105
-#define PREHEAT_2_TEMP_CHAMBER 35
+#define PREHEAT_2_TEMP_HOTEND 220
+#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_CHAMBER 37
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 
@@ -1831,10 +1831,10 @@
 
 #define PREHEAT_4_LABEL         "GD-PC"
 #define PREHEAT_4_TEMP_HOTEND   290
-#define PREHEAT_4_TEMP_BED      132
+#define PREHEAT_4_TEMP_BED      125
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL         "CoPA-NYLON"
+#define PREHEAT_5_LABEL         "PolyMaker-NYLON/PC"
 #define PREHEAT_5_TEMP_HOTEND   260
 #define PREHEAT_5_TEMP_BED      60
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255

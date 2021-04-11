@@ -37,7 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V44  04/xx/2021 xx:xx
+ * V44  04/11/2021 10:36
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/11/2021
+ *      #define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (17*60) }
+ *      #define MANUAL_FEEDRATE { 100*60, 100*60, 17*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ *      #define ENCODER_10X_STEPS_PER_SEC   20  // (steps/s) Encoder rate for 10x speed
+ *      #define ENCODER_100X_STEPS_PER_SEC  50  // (steps/s) Encoder rate for 100x speed * 
  * 
  * V43  04/09/2021 10:50
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/09/2021
