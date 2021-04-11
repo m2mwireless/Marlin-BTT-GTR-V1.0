@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "43" 
+#define COMPILE_VERSION "44" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,10 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V44  04/xx/2021 xx:xx
+ * 
  * V43  04/09/2021 10:50
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/09/2021
  *      #define HOMING_BACKOFF_POST_MM { 0, 0, 10 }    // (mm) Backoff from endstops after homing
-
+ * 
  *      #define DEFAULT_MAX_FEEDRATE          { 250, 250, 17, 250, 250 }
  *      #define DEFAULT_MAX_ACCELERATION      { 3500, 3500, 250, 9999, 9999 }
  *      #define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
