@@ -37,13 +37,23 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V45  04/13/2021 08:45
+ * V45  04/13/2021 09:52
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/13/2021
+ *      #define HOMING_BUMP_MM      { 0, 0, 3 }       // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 2, 2, 5 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      #define HOMING_BACKOFF_POST_MM { 0, 0, 10 }
+ *      #define ENCODER_10X_STEPS_PER_SEC   50      // (steps/s) Encoder rate for 10x speed
+ *      #define ENCODER_100X_STEPS_PER_SEC  100     // (steps/s) Encoder rate for 100x speed * 
+ *      #define PREHEAT_SHORTCUT_MENU_ITEM
+ *      #elif CHAMBER_FAN_MODE == 2
+ *          #define CHAMBER_FAN_BASE   0   // Minimum chamber fan PWM (0-255)
+ *          #define CHAMBER_FAN_FACTOR 7   // PWM increase per °C difference from target
+ *      #define N_ARC_CORRECTION       25 // Number of interpolated segments between corrections
  * 
  * V44  04/11/2021 10:36
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/11/2021
  *      #define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (17*60) }
- *      #define MANUAL_FEEDRATE { 100*60, 100*60, 17*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ *      #define MANUAL_FEEDRATE { 100*60, 100*60, 17*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel0
  *      #define ENCODER_10X_STEPS_PER_SEC   20  // (steps/s) Encoder rate for 10x speed
  *      #define ENCODER_100X_STEPS_PER_SEC  50  // (steps/s) Encoder rate for 100x speed * 
  * 
