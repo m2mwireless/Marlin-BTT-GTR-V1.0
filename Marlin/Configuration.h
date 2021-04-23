@@ -514,7 +514,7 @@
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
 #define BED_MAXTEMP      150
-#define CHAMBER_MAXTEMP  60
+#define CHAMBER_MAXTEMP  59
 
 /**
  * Thermal Overshoot
@@ -522,7 +522,11 @@
  * (especially before PID tuning). Setting the target temperature too close to MAXTEMP guarantees
  * a MAXTEMP shutdown! Use these values to forbid temperatures being set too close to MAXTEMP.
  */
-#define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+//#define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+//#define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+//#define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
+
+#define HOTEND_OVERSHOOT 20   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
 
@@ -901,7 +905,9 @@
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.20, 1285.20, 6444.00, 6220.00, 6220.00 }
+
+// calib 04/21/2021 50x50mm 
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.00, 1285.20, 6444.00, 6220.00, 6220.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1807,13 +1813,13 @@
 
 #define PREHEAT_1_LABEL       "PLA-PRO"
 #define PREHEAT_1_TEMP_HOTEND 220
-#define PREHEAT_1_TEMP_BED     45
+#define PREHEAT_1_TEMP_BED     50
 #define PREHEAT_1_TEMP_CHAMBER 0
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "GD-ABS"
-#define PREHEAT_2_TEMP_HOTEND 220
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_LABEL       "ABS"
+#define PREHEAT_2_TEMP_HOTEND 250
+#define PREHEAT_2_TEMP_BED    100
 #define PREHEAT_2_TEMP_CHAMBER 37
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
@@ -1824,17 +1830,17 @@
      // #define CUSTOM_MENU_MAIN
  */
 
-#define PREHEAT_3_LABEL         "GD-HIPS"
+#define PREHEAT_3_LABEL         "HIPS"
 #define PREHEAT_3_TEMP_HOTEND   240
 #define PREHEAT_3_TEMP_BED      100
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL         "GD-PC"
-#define PREHEAT_4_TEMP_HOTEND   290
-#define PREHEAT_4_TEMP_BED      125
+#define PREHEAT_4_LABEL         "Polymaker-PC"
+#define PREHEAT_4_TEMP_HOTEND   250
+#define PREHEAT_4_TEMP_BED      105
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL         "PolyMaker-NYLON/PC"
+#define PREHEAT_5_LABEL         "Polymaker-NYLON"
 #define PREHEAT_5_TEMP_HOTEND   260
 #define PREHEAT_5_TEMP_BED      60
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
