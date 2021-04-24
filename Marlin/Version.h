@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "47" 
+#define COMPILE_VERSION "48" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,15 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V48  04/24/2021 10:50
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/24/2021
+ *          #define HEATER_0_MAXTEMP 325
+ *          #define HEATER_1_MAXTEMP 325
+ *          #define HOTEND_OVERSHOOT 20   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+ *          #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+ *          #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT  
+ *          #define SOFT_RESET_VIA_SERIAL         // 'KILL' and '^X' commands will soft-reset the controller
  * 
  * V47  04/21/2021 13:41
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/21/2021
