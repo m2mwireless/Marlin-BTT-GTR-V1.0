@@ -28,7 +28,7 @@
  ************************************/
 #define COMPILE_VERSION "51" 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.8.0-" COMPILE_VERSION
+#define SHORT_BUILD_VERSION "bugfix-2.0.8.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
 #define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
 #define MACHINE_NAME "JAM-ENG Ender3 pro"
@@ -39,7 +39,7 @@
  * 
  * V51  05/16/2021 15:46
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  05/16/2021
- * 
+ *          ** RELEAED : bugfix-2.0.8.1 **
  *      !!** Rewired Ender + control cables. Made convertible between enclosure or stand alone. **!!
  * 
  *      #define INVERT_Z_DIR    true       // rewired - Z was backwards - fixed ( was false )
