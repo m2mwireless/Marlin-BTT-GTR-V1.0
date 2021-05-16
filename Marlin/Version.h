@@ -26,9 +26,9 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "50" 
+#define COMPILE_VERSION "51" 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
+#define SHORT_BUILD_VERSION "bugfix-2.0.8.0-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
 #define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
 #define MACHINE_NAME "JAM-ENG Ender3 pro"
@@ -37,7 +37,18 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V50  04/30/2021 08:22
+ * V51  05/16/2021 15:46
+ *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  05/16/2021
+ * 
+ *      !!** Rewired Ender + control cables. Made convertible between enclosure or stand alone. **!!
+ * 
+ *      #define INVERT_Z_DIR    true       // rewired - Z was backwards - fixed ( was false )
+ * 
+ *      !! Added Y HC-89 Optical Endstop
+ *          //#define ENDSTOPPULLUP_YMAX
+ *          #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+ * 
+ * V50  04/30/2021 08:22 
  *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/28/2021
  *      MARLIN FIRMWARE RELEASE 2.0.8.0 * 
  * 

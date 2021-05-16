@@ -782,7 +782,7 @@
 #if DISABLED(ENDSTOPPULLUPS)
 // Disable ENDSTOPPULLUPS to set pullups individually
 //#define ENDSTOPPULLUP_XMAX
-#define ENDSTOPPULLUP_YMAX
+//#define ENDSTOPPULLUP_YMAX
 //#define ENDSTOPPULLUP_ZMAX
 
 #define ENDSTOPPULLUP_XMIN
@@ -809,9 +809,10 @@
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 //#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 //#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define X_MIN_ENDSTOP_INVERTING true // HC-89 Optical board on X AXIS.
 #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop for HC-89 Optical board.
 
@@ -1309,7 +1310,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true
 
 // @section extruder
 
