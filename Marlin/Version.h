@@ -37,19 +37,19 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V51  05/16/2021 15:46
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  05/16/2021
+ * V51  05/16/2021 17:05
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/16/2021
  *          ** RELEAED : bugfix-2.0.8.1 **
  *      !!** Rewired Ender + control cables. Made convertible between enclosure or stand alone. **!!
- * 
- *      #define INVERT_Z_DIR    true       // rewired - Z was backwards - fixed ( was false )
+ *              #define INVERT_E1_DIR   true        // E1 is LEFT  side extruder ( was false )
+ *              #define INVERT_Z_DIR    true        // rewired - Z was backwards - fixed ( was false )
  * 
  *      !! Added Y HC-89 Optical Endstop
  *          //#define ENDSTOPPULLUP_YMAX
  *          #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
  * 
  * V50  04/30/2021 08:22 
- *      UPDATES: MARLIN upstream bugfix-2.0(.7.2)  04/28/2021
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.0)  04/28/2021
  *      MARLIN FIRMWARE RELEASE 2.0.8.0 * 
  * 
  * V49  04/28/2021 09:42
