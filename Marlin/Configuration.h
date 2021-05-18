@@ -1315,8 +1315,8 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false      // E0 is RIGHT side extruder 
-#define INVERT_E1_DIR true     // E1 is LEFT  side extruder
+#define INVERT_E0_DIR false     // E0 is RIGHT side extruder 
+#define INVERT_E1_DIR true      // E1 is LEFT  side extruder
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false
