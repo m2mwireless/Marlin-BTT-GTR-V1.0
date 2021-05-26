@@ -37,9 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V53  05/25/2021 xx:xx
+ * V53  05/25/2021 18:01
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/25/2021
- *           
+ *          M92 X1283.00 Y1284.20 Z6500.00
+ *          #define LIN_ADVANCE_K 0.08 
+ *          #define Z_CURRENT       1350
+ * 
  * V52  05/18/2021 09:37
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/18/2021
  * 
