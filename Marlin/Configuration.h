@@ -915,7 +915,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 // calib 04/21/2021 50x50mm 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.00, 1285.20, 6444.00, 6220.00, 6220.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.10, 1284.85, 6445.00, 6220.00, 6220.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -923,7 +923,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
-#define DEFAULT_MAX_FEEDRATE          { 250.00, 200.00, 15, 500, 500 }
+#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 15, 500, 500 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
