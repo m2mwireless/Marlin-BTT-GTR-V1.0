@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "53" 
+#define COMPILE_VERSION "54" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,12 +37,23 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V54  05/28/2021 11:38
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/28/2021
+ *      #define Z_CURRENT       800
+ *      #define TMC_HOME_PHASE { 128, 896, 128 }
+ *      M92 X1285.00 Y1285.50 Z6436.00
+ *      #define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 15, 200, 200 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 150, 9999, 9999 }
+ *      #define JUNCTION_DEVIATION_MM 0.013
+ *      REMOVED://#define SQUARE_WAVE_STEPPING
+ *      
+ *      
  * V53  05/25/2021 18:01
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/25/2021
  *          M92 X1283.00 Y1284.20 Z6500.00
  *          #define LIN_ADVANCE_K 0.08 
  *          #define Z_CURRENT       1350
- * 
+ *          
  * V52  05/18/2021 09:37
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/18/2021
  * 

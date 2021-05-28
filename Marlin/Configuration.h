@@ -920,8 +920,8 @@
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
-// calib 04/21/2021 50x50mm 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1283.00, 1284.20, 6500.00, 6160.00, 6160.00 }
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.00, 1285.50, 6436.00, 6160.00, 6160.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -929,7 +929,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
-#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 15, 500, 500 }
+#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 15, 200, 200 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -944,7 +944,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
-#define DEFAULT_MAX_ACCELERATION      { 3500, 3500, 250, 9999, 9999 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 150, 9999, 9999 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1001,7 +1001,7 @@
 #if DISABLED(CLASSIC_JERK)
 //  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
 //  #define JUNCTION_DEVIATION_MM 0.08 // (mm) Distance from real junction edge
-  #define JUNCTION_DEVIATION_MM 0.01 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1694,6 +1694,13 @@
  */
 //#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
 
+
+
+
+
+
+
+
 // @section homing
 
 // The center of the bed is at (X=0, Y=0)
@@ -1723,10 +1730,17 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (17*60) }
+#define HOMING_FEEDRATE_MM_M { (110*60), (110*60), (17*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
+
+
+
+
+
+
+
 
 // @section calibrate
 
