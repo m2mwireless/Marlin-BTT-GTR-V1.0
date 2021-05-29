@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "55" 
+#define COMPILE_VERSION "56" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,6 +37,10 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V56  05/xx/2021 xx:00
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/xx/2021
+ *      #define Y_MIN_POS -7    //  Home offset:  M206 X0.00 Y-7.00 Z0.00
+ *      
  * V55  05/29/2021 10:00
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/29/2021
  *      #define SHOW_TEMP_ADC_VALUES
@@ -52,6 +56,8 @@
  *      #define DEFAULT_TRAVEL_ACCELERATION   3350    // X, Y, Z acceleration for travel (non printing) moves
  *      #define X_CURRENT       840
  *      #define Y_CURRENT       840
+ *      #define Z_CURRENT       1100
+ *      #define Z2_CURRENT      1100
  * 
  * V54  05/28/2021 11:36
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/28/2021
