@@ -37,9 +37,21 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V55  05/xx/2021 11:36
- *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/xx/2021
+ * V55  05/29/2021 10:00
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/29/2021
  *      #define SHOW_TEMP_ADC_VALUES
+ *      #define HOMING_BUMP_MM      { 0, 0, 5 }       // (mm) Backoff from endstops after first bump
+ *      #define HOMING_BUMP_DIVISOR { 3, 3, 7 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+ *      define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (15*60) }
+ *      #define MANUAL_FEEDRATE { 100*60, 100*60, 15*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.00, 6436.00, 6160.00, 6160.00 }
+ *      #define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 15, 200, 200 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 3500, 3500, 150, 9999, 9999 }       
+ *      #define DEFAULT_ACCELERATION          2750    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  2750    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   3350    // X, Y, Z acceleration for travel (non printing) moves
+ *      #define X_CURRENT       840
+ *      #define Y_CURRENT       840
  * 
  * V54  05/28/2021 11:36
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/28/2021

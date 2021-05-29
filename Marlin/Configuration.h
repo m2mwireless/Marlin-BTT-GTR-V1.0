@@ -917,11 +917,11 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
 
-// E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
+// E0/E1 = BMG direct drive steppers ( pancake )  ( 385.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1285.00, 1285.50, 6436.00, 6160.00, 6160.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.00, 6436.00, 6160.00, 6160.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -929,7 +929,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
-#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 15, 200, 200 }
+#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 15, 200, 200 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -944,7 +944,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000, 10000 }
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 150, 9999, 9999 }
+#define DEFAULT_MAX_ACCELERATION      { 3500, 3500, 150, 9999, 9999 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -963,9 +963,9 @@
 //#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          2750    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2750    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3350    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1730,7 +1730,7 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (110*60), (110*60), (17*60) }
+#define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (15*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS

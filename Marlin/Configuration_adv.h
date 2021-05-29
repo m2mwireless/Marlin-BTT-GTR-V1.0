@@ -788,8 +788,8 @@
 
 #define SENSORLESS_BACKOFF_MM  { 0, 0 }       // (mm) Backoff from endstops before sensorless homing
 
-#define HOMING_BUMP_MM      { 0, 0, 3 }       // (mm) Backoff from endstops after first bump
-#define HOMING_BUMP_DIVISOR { 2, 2, 5 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+#define HOMING_BUMP_MM      { 0, 0, 5 }       // (mm) Backoff from endstops after first bump
+#define HOMING_BUMP_DIVISOR { 3, 3, 7 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 #define HOMING_BACKOFF_POST_MM { 0, 0, 10 }    // (mm) Backoff from endstops after homing
 
 #define QUICK_HOME                            // If G28 contains XY do a diagonal move first
@@ -1186,7 +1186,7 @@
 
 #if EITHER(IS_ULTIPANEL, EXTENSIBLE_UI)
 //  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
-  #define MANUAL_FEEDRATE { 110*60, 110*60, 17*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+  #define MANUAL_FEEDRATE { 100*60, 100*60, 15*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
   #define FINE_MANUAL_MOVE 0.025    // (mm) Smallest manual move (< 0.1mm) applying to Z on most machines
   #if IS_ULTIPANEL
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
