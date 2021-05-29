@@ -376,6 +376,10 @@
   #endif
 #endif
 
+
+
+
+
 /**
  * Automatic Temperature Mode
  *
@@ -401,9 +405,11 @@
   #endif
 #endif
 
+
+
 // Show Temperature ADC value
 // Enable for M105 to include ADC values read from temperature sensors.
-//#define SHOW_TEMP_ADC_VALUES
+#define SHOW_TEMP_ADC_VALUES
 
 /**
  * High Temperature Thermistor Support
@@ -431,6 +437,18 @@
 // the minimum temperature your thermistor can read. The lower the better/safer.
 // This shouldn't need to be more than 30 seconds (30000)
 //#define MILLISECONDS_PREHEAT_TIME 0
+
+
+
+
+
+
+
+
+
+
+
+
 
 // @section extruder
 
