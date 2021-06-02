@@ -921,7 +921,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.00, 6436.00, 6160.00, 6160.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.10, 6422.00, 6160.00, 6160.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -963,9 +963,9 @@
 //#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-#define DEFAULT_ACCELERATION          2750    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  2750    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3350    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
