@@ -131,8 +131,9 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
-//#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
+//#define BAUDRATE 250000
+#define BAUDRATE 115200
+#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -921,7 +922,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.10, 6422.00, 6160.00, 6160.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.0, 6422.00, 6160.00, 6160.00 }
 
 /**
  * Default Max Feed Rate (mm/s)

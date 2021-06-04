@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "56" 
+#define COMPILE_VERSION "57" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,7 +37,14 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V56  06/02/2021 11:55
+ * V557  06/03/2021 15:047
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  0 6/03/2021
+ * 
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.00, 6436.00, 6160.00, 6160.00 }
+ *      #define BAUDRATE 115200 
+ *      #define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
+ *  
+ * V56  06/02/2021 12:01
  * 
  *      ** RELEASED : bugfix-2.0.8.2 **
  * 
@@ -46,7 +53,10 @@
  *      #define CANCEL_OBJECTS
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.10, 6422.00, 6160.00, 6160.00 }
  *      #define Y_MIN_POS -7    //  Home offset:  M206 X0.00 Y-7.00 Z0.00
- *      
+ *      #define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
+*      
  * V55  05/29/2021 10:00
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.1)  05/29/2021
  *      #define SHOW_TEMP_ADC_VALUES
