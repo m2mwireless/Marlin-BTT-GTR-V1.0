@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "57" 
+#define COMPILE_VERSION "58" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,12 +37,17 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V557  06/03/2021 15:50
+ * V58  06/05/2021 13:40
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/05/2021
+ * 
+ *      Calibrated creality bed thermistor >> thermistor_1.h ( 25 - 132 )
+ * 
+ * V57  06/03/2021 15:50
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  0 6/03/2021
  * 
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.00, 6436.00, 6160.00, 6160.00 }
  *      #define BAUDRATE 115200 
- *      #define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
+ *      #define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  
  *  
  * V56  06/02/2021 12:01
  * 
