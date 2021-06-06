@@ -37,7 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V58  06/05/2021 13:40
+ * V59  06/06/2021 07:45
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/06/2021
+ * 
+ *          refinements to bed thermistor >> thermistor_1.h ( 25 - 132 )
+ * 
+ * V58  06/05/2021 13:48
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/05/2021
  * 
  *      Calibrated creality bed thermistor >> thermistor_1.h ( 25 - 132 )
