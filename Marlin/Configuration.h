@@ -608,14 +608,15 @@
    //   M301 E0 P15.92 I1.42 D44.54 
    //   M301 E1 P23.81 I2.27 D62.51
    //
+   //   06/05/2021 - E0 Kp: 17.44 Ki: 1.69 Kd: 45.04
    //////////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  15.92,  23.81 }
-    #define DEFAULT_Ki_LIST {   1.42,   2.27 }
-    #define DEFAULT_Kd_LIST {  44.54,  62.51 }
+    #define DEFAULT_Kp_LIST {  17.44,  23.81 }
+    #define DEFAULT_Ki_LIST {   1.69,   2.27 }
+    #define DEFAULT_Kd_LIST {  45.04,  62.51 }
   #else
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -675,11 +676,14 @@
   // 02/07/2021 @ 90C ( FAN_SOFT_PWM, SOFT_PWM_SCALE 0 -- NO FAST_PWM )
   // M304 P99.75 I19.48 D340.43
   // 
+  // 06/05/2021
+  // Kp: 118.67 Ki: 22.47 Kd: 417.71
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 99.75
-#define DEFAULT_bedKi 19.48
-#define DEFAULT_bedKd 340.43
+
+#define DEFAULT_bedKp 118.67
+#define DEFAULT_bedKi 22.47
+#define DEFAULT_bedKd 417.71
 
 #endif // PIDTEMPBED
 

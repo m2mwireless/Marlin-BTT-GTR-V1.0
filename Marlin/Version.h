@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "58" 
+#define COMPILE_VERSION "59" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,8 +36,11 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+
+ * V60  06/xx/2021 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/xx/2021
  * 
- * V59  06/06/2021 07:45
+ * V59  06/06/2021 14:03
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/06/2021
  * 
  *          refinements to bed thermistor >> thermistor_1.h ( 25 - 132 )
