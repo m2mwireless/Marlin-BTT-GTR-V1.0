@@ -37,14 +37,14 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V61  06/xx/2021 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/xx/2021
+ * V61  xx/xx/2021 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  xx/xx/2021
  * 
- * V60  06/12/2021 11:00
+ * V60  06/12/2021 11:38
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/12/2021
  *      #define X_CURRENT       800 ( all steppers @800 )
  *      #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
- *      #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
+ *      #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
  *      #define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 12, 200, 200 }
  * 
  *      
