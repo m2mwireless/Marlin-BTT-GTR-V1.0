@@ -1014,7 +1014,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
-#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 15, 200, 200 }
+#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 12, 200, 200 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1048,8 +1048,8 @@
 //#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
-#define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -1088,7 +1088,6 @@
  */
 #if DISABLED(CLASSIC_JERK)
 //  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
-//  #define JUNCTION_DEVIATION_MM 0.08 // (mm) Distance from real junction edge
   #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
