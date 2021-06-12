@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "59" 
+#define COMPILE_VERSION "60" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,10 +36,18 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
-
- * V60  06/xx/2021 xx:xx
+ * 
+ * V61  06/xx/2021 xx:xx
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/xx/2021
  * 
+ * V60  06/12/2021 11:00
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/12/2021
+ *      #define X_CURRENT       800 ( all steppers @800 )
+ *      #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
+ *      #define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 12, 200, 200 }
+ * 
+ *      
  * V59  06/06/2021 14:03
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/06/2021
  * 
