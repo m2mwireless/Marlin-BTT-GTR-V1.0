@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "60" 
+#define COMPILE_VERSION "61" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,9 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V61  xx/xx/2021 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  xx/xx/2021
+ * V61  06/13/2021 11:42
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/13/2021
  * 
+ *      #define X_BED_SIZE 242
+ *      #define Y_BED_SIZE 231 
+ *        
  * V60  06/12/2021 11:38
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/12/2021
  *      #define X_CURRENT       800 ( all steppers @800 )
