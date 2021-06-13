@@ -1023,7 +1023,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.0, 6422.00, 6160.00, 6160.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.22, 1287.0, 6422.00, 5682.60, 6160.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1066,7 +1066,7 @@
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
 #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -1094,7 +1094,8 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+//#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    9.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1105,7 +1106,10 @@
  */
 #if DISABLED(CLASSIC_JERK)
 //  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
-  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+
+//  #define JUNCTION_DEVIATION_MM 0.005 // [ .4 (NOZZLE DIAM) * 5( DEFAULT_EJERK)  * 5( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
+  #define JUNCTION_DEVIATION_MM 0.0162 // [ .4 (NOZZLE DIAM) * 9( DEFAULT_EJERK)  * 9( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
+
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif

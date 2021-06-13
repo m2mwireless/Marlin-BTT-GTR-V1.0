@@ -37,12 +37,29 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V61  06/13/2021 11:42
- *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/13/2021
+ * V61  06/13/2021 14:00
  * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/13/2021
+ *      #define DEFAULT_EJERK    9.0  // May be used by Linear Advance
+ *      #define JUNCTION_DEVIATION_MM 0.0162 // [ .4 (NOZZLE DIAM) * 9( DEFAULT_EJERK)  * 9( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
+ *          0.4*9*9/2000=0.0162             - d=0.4 *  ( ) Jerk^2 / Acceleration_{printing} )
+ *      #define X_CURRENT       710 ( all steppers @710  == 1 AMP )
+ *      #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
  *      #define X_BED_SIZE 242
  *      #define Y_BED_SIZE 231 
- *        
+ *  
+ *      RE-ADJUSTING Extruder Steps - translate current calibration of filament x-factor from ~0.92 to ~1.00
+ *      ORIGINAL_EXT_STEPS = 6160
+ * 
+ *              compensation_factor     = ( 1.0  /  0.9225{DURAMIC_PLA_X_FACTOR} )  =   1.084010840108401
+ * 
+ *      CORRECTED_EXT_STEPS = 6160 / 1.084010840108401             = 5682.60
+ * 
+ *      DURAMIC_PLA_X_FACTOR    = 0.9225    * 1.084010840108401    = 0.999999999999999      ( PERIMETER OVERLAP @ 22.5% )
+ *      GIZMO_DORKS_PC          = 0.945     * 1.084010840108401    = 1.024390243902439
+ *      POLYMAKER_COPA_NYLON    = 0.945     * 1.084010840108401    = 1.024390243902439
+ *      POLYMAKER_POLYMAX_PC    = 0.9175    * 1.084010840108401    = 0.9945799457994579
+ * 
  * V60  06/12/2021 11:38
  *      UPDATES: MARLIN upstream bugfix-2.0(.8.2)  06/12/2021
  *      #define X_CURRENT       800 ( all steppers @800 )
