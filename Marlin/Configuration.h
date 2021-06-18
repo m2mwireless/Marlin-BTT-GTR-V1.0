@@ -1023,7 +1023,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.0, 1286.50, 6422.00, 5682.60, 5682.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.0, 1286.0, 6422.00, 5683.0, 5683.0 }
 //M92 X1286.00 Y1286.75 Z6422.00
 /**
  * Default Max Feed Rate (mm/s)
@@ -1031,7 +1031,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 12, 200, 200 }
-#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 12, 200, 200 }
+#define DEFAULT_MAX_FEEDRATE          { 200.00, 200.00, 8, 200, 200 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1094,8 +1094,7 @@
   #endif
 #endif
 
-//#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
-#define DEFAULT_EJERK    9.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1107,8 +1106,7 @@
 #if DISABLED(CLASSIC_JERK)
 //  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
 
-//  #define JUNCTION_DEVIATION_MM 0.005 // [ .4 (NOZZLE DIAM) * 5( DEFAULT_EJERK)  * 5( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
-  #define JUNCTION_DEVIATION_MM 0.0162 // [ .4 (NOZZLE DIAM) * 9( DEFAULT_EJERK)  * 9( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
+  #define JUNCTION_DEVIATION_MM 0.005 // [ .4 (NOZZLE DIAM) * 5( DEFAULT_EJERK)  * 5( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
 
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).

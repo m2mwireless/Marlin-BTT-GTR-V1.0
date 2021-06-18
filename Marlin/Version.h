@@ -26,9 +26,9 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "62" 
+#define COMPILE_VERSION "64" 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.8.2-" COMPILE_VERSION
+#define SHORT_BUILD_VERSION "bugfix-2.0.9.0-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
 #define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
 #define MACHINE_NAME "JAM-ENG Ender3 pro"
@@ -37,9 +37,21 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V64  06/18/2021 18:02
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.9.0)  06/18/2021
+ *      
+ *      #define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+ *      #define JUNCTION_DEVIATION_MM 0.005 // [ .4 (NOZZLE DIAM) * 5( DEFAULT_EJERK)  * 5( DEFAULT_EJERK) / 2000 (PRINTING ACCELERATION)         
+ * 
+ * V63  06/15/2021 18:02
+ * 
+ *      UPDATES: MARLIN upstream bugfix-2.0(.9.0)  06/15/2021
+ *      REMOVED: TMC_HOME_PHASE
+ * 
  * V62  06/15/2021 10:02
  * 
- *      ** RELEASED : bugfix-2.0.9.0 **
+ *      ** RELEASED : bugfix-2.0.9.0 **     #define CONFIGURATION_ADV_H_VERSION 02000900
  * 
  *      UPDATES: MARLIN upstream bugfix-2.0(.9.0)  06/15/2021
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.0, 1286.50, 6422.00, 5682.60, 5682.00 }
