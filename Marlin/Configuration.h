@@ -1024,7 +1024,7 @@
 
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.0, 1286.0, 6422.00, 5683.0, 5683.0 }
-//M92 X1286.00 Y1286.75 Z6422.00
+
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
