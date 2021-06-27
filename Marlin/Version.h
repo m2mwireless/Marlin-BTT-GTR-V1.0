@@ -28,7 +28,7 @@
  ************************************/
 #define COMPILE_VERSION "65" 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.9.0-" COMPILE_VERSION
+#define SHORT_BUILD_VERSION "bugfix-2.0.9.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
 #define CUSTOM_MACHINE_NAME "BTT GTR v1.0 tmc-2209"     // Name displayed in the LCD "Ready" message and Info menu
 #define MACHINE_NAME "JAM-ENG Ender3 pro"
@@ -37,9 +37,11 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V65  06/xx/2021 xx:xx
+ * V65  06/27/2021 14:59
  * 
- *      UPDATES: MARLIN upstream bugfix-2.0(.9.0)  06/xx/2021
+ *      ** RELEASED : bugfix-2.0.9.1 **     #define CONFIGURATION_ADV_H_VERSION 02000900
+ * 
+ *  *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  06/27/2021
  * 
  * V64  06/18/2021 09:29
  * 
