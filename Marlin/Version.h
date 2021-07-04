@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "65" 
+#define COMPILE_VERSION "66" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.9.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -36,6 +36,9 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V66  07/04/2021 13:10
+ *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  07/04/2021
  * 
  * V65  06/27/2021 14:59
  * 
