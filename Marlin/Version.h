@@ -37,9 +37,9 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V67  07/08/2021 09:51
+ * V67  07/08/2021 09:50
  *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  07/08/2021
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.0, 1284.66, 6422.00, 5683.0, 5683.0 }
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.0, 1284.66, 6422.00, 5683.0, 5683.0 }   !! set to Duramic PLA+ 220C 50C 100mm test square
  *      #define RX_BUFFER_SIZE 1024
  *          #define SERIAL_XON_XOFF
  *      #define TX_BUFFER_SIZE 32
