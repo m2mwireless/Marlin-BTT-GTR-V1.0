@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "66" 
+#define COMPILE_VERSION "67" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.9.1-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                    // Who made the changes.
@@ -37,7 +37,14 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V66  07/04/2021 13:10
+ * V67  07/08/2021 09:41
+ *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  07/08/2021
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.0, 1284.66, 6422.00, 5683.0, 5683.0 }
+ *      #define RX_BUFFER_SIZE 1024
+ *          #define SERIAL_XON_XOFF
+ *      #define TX_BUFFER_SIZE 32
+ * 
+ * V66  07/04/2021 13:15
  *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  07/04/2021
  * 
  * V65  06/27/2021 14:59

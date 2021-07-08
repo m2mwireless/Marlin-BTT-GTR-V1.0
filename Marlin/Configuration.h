@@ -102,14 +102,14 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  * 
- * -1 = Bootloader  - Built in USB on SKR PRO 1.1 / BTT GTR 1.0 / SKR 1.4 Turbo / SKR Mini E3 V2.0
+ * -1 = Bootloader / SERIAL_PORT - Built in USB on SKR PRO 1.1 / BTT GTR 1.0 / SKR 1.4 Turbo / SKR Mini E3 V2.0
  * 
  *  0 = N/A         - NOT DEFINED on CHIPSET
  * 
  *  1 = TFT         - SKR PRO V1.1
  *  3 = UART3       - SKR PRO V1.1 lower right corner UART Rx,Tx, Gnd, 5V ( left to right )
  * 
- *  1 = ??
+ *  1 = PI-INT      - BTT GTR V1.0 RPi Onboard Interface Serial Port
  *  3 = TFT         - BTT GTR V1.0 TFT Connector  5V, Gnd, Tx, Rx, Rst 
  * 
  *  4 = NO BOOT
@@ -131,18 +131,31 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-//#define BAUDRATE 250000
-#define BAUDRATE 115200
+#define BAUDRATE 250000
+//#define BAUDRATE 115200
 #define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
+
+
+
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 3 
 //#define SERIAL_PORT_2 -1
+//#define SERIAL_PORT_2 3   // BTT GTR V1.0 TFT
+#define SERIAL_PORT_2 1     // BTT GTR RPI Interface Serial
+
 //#define BAUDRATE_2 250000   // Enable to override BAUDRATE
+#define BAUDRATE_2 115200   // Enable to override BAUDRATE
+
+
+
+
+
+
+
 
 /**
  * Select a third serial port on the board to use for communication with the host.
@@ -152,13 +165,23 @@
 //#define SERIAL_PORT_3 1
 //#define BAUDRATE_3 250000   // Enable to override BAUDRATE
 
+
+
+
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
+
+
+
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
    #define MOTHERBOARD BOARD_BTT_GTR_V1_0      // BigTreeTech GTR v1.0 (STM32F407IGT)
 #endif
+
+
+
+
 
 // Name displayed in the LCD "Ready" message and Info menu
 //#define CUSTOM_MACHINE_NAME "3D Printer"
@@ -1025,7 +1048,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1286.0, 1286.0, 6422.00, 5683.0, 5683.0 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.0, 1284.66, 6422.00, 5683.0, 5683.0 }
 
 /**
  * Default Max Feed Rate (mm/s)
