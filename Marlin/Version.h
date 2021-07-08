@@ -37,7 +37,7 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
- * V67  07/08/2021 09:41
+ * V67  07/08/2021 09:51
  *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  07/08/2021
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1284.0, 1284.66, 6422.00, 5683.0, 5683.0 }
  *      #define RX_BUFFER_SIZE 1024
@@ -51,7 +51,7 @@
  * 
  *      ** RELEASED : bugfix-2.0.9.1 **     #define CONFIGURATION_ADV_H_VERSION 02000900
  * 
- *  *      UPDATES: MARLIN upstream bugfix-2.0(.9.1)  06/27/2021
+ *       UPDATES: MARLIN upstream bugfix-2.0(.9.1)  06/27/2021
  * 
  * V64  06/18/2021 09:29
  * 
@@ -794,6 +794,7 @@
  * version was tagged.
  */
 #define STRING_DISTRIBUTION_DATE  __DATE__ " " __TIME__
+//#define STRING_DISTRIBUTION_DATE "2021-07-08"
 
 
 /**
